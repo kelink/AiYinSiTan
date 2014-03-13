@@ -1,0 +1,545 @@
+@import "preboot.less";
+@import "reset.less";
+
+
+/*个人中心公共部分*/
+.personal_center{
+	background:#f3f3f3;
+	border-top:3px solid #0099ff;
+
+	h3{
+		background: #f2f2f2 url("@{images-path}/my_friend.png") no-repeat;
+		height:22px;
+		padding-left:27px;
+		color:#4c4c4c;
+	}
+}
+	/*个人中心的导航*/
+	.nav{
+		.fl();
+		height:100%;
+		margin-left:123px;
+		ul{overflow:hidden;height:100%;}
+		li{
+			.fl();
+			width:100px;
+			height:100%;
+		}
+		a{	
+			display:block;
+			height:100%;
+			line-height:70px;
+			position:relative;
+		}
+		h2{text-align:center;color:#fff;}
+		span{position:absolute;display:none;}
+
+	}
+		.current_li{
+
+			.triangle{
+				display:block;
+				background:url("@{images-path}/nav_triangle.png") no-repeat;
+				bottom:0px;
+				left:20px;
+				width:19px;height:10px;
+				text-indent:-9999px;
+			}
+		}
+
+.my_friend_list, .recommend_list, .rank_list{
+	.fl();
+	border: 1px solid #cccccc;
+	position:relative; 
+	h3{height:22px;}
+}
+
+/*个人中心我的好友页面*/
+.shadow_div{
+	display:none;
+	z-index:1;
+	width:100%; height:100%;
+	background:rgba(0,0,0,0.5);
+	position:absolute;
+	top:0px;left:0px;
+}
+.friend_info{
+	display:none;
+	width:411px;
+	position:absolute;
+	border: 5px solid #afe1fa;
+	padding:16px 21px;
+	background:#fff;
+	z-index:2;
+	left:0px; top:0px;
+
+	li{overflow:hidden;padding-bottom:25px;}
+	img, label, span, div, button{.fl();}
+	img{margin-right:14px;}
+	label{color:#4c4c4c;}
+	span{color:#999999;}
+	div{line-height:27px;}
+	.fi_name{
+		width:325px;
+		label{width:42px;}
+		.name{width:80px;}
+		.email{width:150px;}
+	}
+	div{width:100%;}
+	.span_70{width:70px;}
+	.span_78{width:78px;}
+	.something_say{width:100%;height:auto;display:block;word-wrap: break-word;}
+	.login_submit{
+		width:108px; height:30px;
+		line-height:30px;
+		.fr();
+	}
+}
+.my_friend_list{
+	width:218px; height:428px;
+	margin-top:28px;
+	margin-left:120px;
+	margin-bottom:44px;
+	h3{background-position:0px 0px;}
+}
+.recommend_list{
+	width:398px;height:203px;
+	margin-top:28px;
+	margin-left:41px;
+	h3{background-position: 0px -32px;}
+}
+.rank_list{
+	width:398px; height:203px;
+	margin-top:20px;
+	margin-left:41px;
+
+	h3{background-position: 0px -64px;}
+}
+.add{
+	.fl();
+	width:24px;height:239px;
+	margin-left:35px;
+	margin-top:122px;
+	span{
+		width:24px; height:15px;
+		background:url("@{images-path}/add.png") no-repeat;
+		display:block;
+		.fl();
+
+		&.second{margin-top:224px;}
+	}
+}
+	.recommend_list, .rank_list{
+		.search{
+			.fr();
+			width:178px; height:21px;
+			border-left:1px solid #cccccc;
+			border-bottom:1px solid #cccccc;
+
+			input{.fl();height:21px;border:0px;}
+			input[type="text"]{width:150px;}
+			input[type="submit"]{width:28px;background:url("@{images-path}/search.png");text-indent:-9999px;}
+		}
+		
+	}
+
+	.pc_list{
+		width:100%;
+		background:#fff;
+		overflow:hidden;
+		position:relative;
+
+		ul{
+			.fl();
+			padding-top:8px;
+			position:absolute;
+			left:0px; top:0px;
+			
+			li{
+				height:33px;
+				line-height:33px;
+				padding-left:4px;
+				a{display:block;}
+
+				&:hover{
+					background:#ebf8ff;
+					a{color:#00aaff;}
+
+					.operate:hover{
+						background:#00aaff;
+						a{color:#fff;}
+					}
+				}
+			}
+
+			img{.fl();margin-right:6px;}
+			span{.fl(); font-size:11px;}
+		}
+		.current_list{
+			background:#ebf8ff;
+			a{color:#00aaff;}
+			.invite_span{background:#00aaff;}
+			.invite{color:#fff;}
+		}
+	}
+
+	.my_friend_list .pc_list{
+		height:406px;
+
+		ul{
+			width:211px;
+		}
+	}
+	.recommend_list .pc_list, .rank_list .pc_list{
+		height:181px;
+		ul{
+			width:391px;
+
+			.operate{.fr();}
+		}
+		a{
+			font-size:12px;
+			color:#999999;
+			margin:0px 10px;
+		}
+
+	}
+
+	.scroll{
+		.fl();
+		width:7px;height:100%;
+		position:absolute;
+		top:0px; right:0px;
+
+		span{
+			.fl();
+			width:6px;height:100px;
+			position:absolute;
+			top:0px;left:0px;
+			background: #e6e6e6 url("@{images-path}/scroll.png") no-repeat center center;
+			.border-radius(3px);
+			pointer:hand;
+			cursor:pointer;
+		}
+	}
+
+		.ul_invite_type{
+			display:none;
+			position:absolute;
+			left:400px;
+			top:0px;
+			padding-left:10px;
+
+			div{
+				background:#00aaff;
+				.border-radius();
+				overflow:hidden;
+				width:90px; height:84px;
+			}
+
+			a{.fl();width:30px; height:30px;display:block; background:url("@{images-path}/invite_type.png") no-repeat;}
+			a.message{margin:6px 0px 0px 8px;background-position: 0px 0px;}
+			a.sina{margin:6px 0 0 15px;background-position: 0px -40px;}
+			a.qq{margin:12px 0 0 8px; background-position: 0px -80px;}
+			a.tencent{margin:12px 0 0 15px;background-position: 0px -120px;}
+			.invite_triangle{
+				width:10px; height:10px;
+				position:absolute;
+				top:37px;
+				left:0px;
+				display:block;
+				background:url("@{images-path}/invite_triangle.png") no-repeat;
+			}
+		}
+
+/*会员等级页面*/
+.member_rank_table{
+	width:729px;
+	margin:25px auto 0px;
+	display:block;
+	border-top:1px solid #0099ff;
+	border-left:1px solid #0099ff;
+
+	tr{height:35px; line-height:35px;}
+	th{color:#4c4c4c; background:#e3f4ff;}
+	td{color:#999999; background:#fff;}
+	th{text-align:center;}
+	span{display:block;border-right:1px solid #0099ff;border-bottom:1px solid #0099ff; height:100%;.text-overflow();}
+	.type{width:118px;}
+	td .type{padding-left:12px; width:106px;}
+	td .type img{.fr(); margin-right:7px; margin-top:6px;}
+	th .intro{width:433px;}
+	td .intro{padding-left:12px; width:421px;}
+	.time{width:89px;text-align:center;}
+	.price{width:86px;text-align:center;}
+
+	.table_bottom div{
+		border-right:1px solid #0099ff;border-bottom:1px solid #0099ff;
+		height:57px;
+		line-height:57px;
+
+		b{width:auto; height:100%; font-size:12px; font-weight:normal; margin-left:34px;color:#0055ff;}
+		button{font-size:11.21px; margin-left:27px;}
+		.login_submit{width:113px; height:29px; line-height:29px;}
+	}
+}
+.rank_system{
+	width:729px;
+	margin:16px auto;
+	display:block;
+	font-size:12.01px;
+	overflow:hidden;
+
+	h4{padding-left:9px;color:#0099ff; font-size:14px;}
+	p{padding-left:9px; color:red;.fl();}
+	ul{width:364px; .fl();}
+	li{
+
+		height:30px;
+		line-height:30px;
+		label{width:91px;.fl(); text-align:right;}
+		p{width:263px; .fl();color:#4c4c4c;}
+	}
+	
+}
+
+/*音乐推荐*/
+.pc_record{
+	width:730px; height:195px;
+	margin:25px auto;
+	position:relative;
+}
+	.big_disc{
+		width:190px; height:190px;
+		position:absolute;
+		background:url("@{images-path}/disc.png");
+		left:50%;
+		margin-left:-95px;
+	}
+		.starBtn_bg{
+			width:53px;height:53px;
+			position:absolute;
+			left:50%; top:50%;
+			margin-left:-26.5px; margin-top:-26.5px;
+			background:url("@{images-path}/disc.png") 0px -200px;
+		}
+			.start_play{
+				width:31px;height:31px;
+				position:absolute;
+				left:50%; top:50%;
+				margin-left:-15.5px; margin-top:-15.5px;
+				background:url("@{images-path}/disc.png") 0px -304px;
+			}
+	.operate_contain{
+		width:613px; height:52px;
+		position:absolute;
+		left:50%; top:50%;
+		margin-left:-306.5px; margin-top:-26px;
+	}
+		.opBtn_bg{
+			.fl();
+			width:52px; height:52px;
+			background:url("@{images-path}/operate.png") 0px 0px;
+			a{
+				background:url("@{images-path}/operate.png");
+				width:26px; height:26px;
+				display:block;
+				margin:13px auto;
+			}
+		}
+			.love{
+				a{background-position:0px -134px;}
+			}
+			.not_love{
+				margin-left:48px;
+				a{background-position: 0px -62px;}
+			}
+			.replay{
+				.fr();
+				margin-right:48px;
+				a{background-position: 0px -170px;}
+			}
+			.next{
+				.fr();
+				a{background-position: 0px -98px;}
+			}
+
+
+.pc_record_list{
+	width:730px;
+	margin:0 auto 16px;
+	.text-overflow();
+}
+
+	.music{
+		.fl();
+		.border-radius();
+		background:#fff;
+		padding:0px 15px 20px;
+		border:1px solid #cccccc;
+		font-size:12px;
+		color:#4c4c4c;
+		h2{
+			height:44px;line-height:44px;
+			color:#0099ff;
+			border-bottom:1px dashed #999999;
+		}
+		th, span,table{text-align:center;}
+		tr{height:30px; line-height:30px;}
+		tr:nth-child(2n){background:#ebf6ff;}
+
+		.checkbox{width:33px;}
+		.rd_song{
+			width:20px; height:20px; text-indent:-9999px; display:block; margin:0 auto;
+			background:url("@{images-path}/song.png");
+		}
+		.listen_btn{background-position:0px -30px;}
+	}
+	.rd_new_song{
+		margin-left:4px;
+		width:328px;
+		
+		.price{width:49px;}
+		.price_span{ color:red;}
+		.listen{width:44px;}
+		.buy{width:60px;}
+		.buy_btn{background-position: 0px -60px;}
+		.name{width:142px;.text-overflow(); display:block; text-align:left;}
+	}
+
+	.rd_my_song{
+		margin-left:30px;
+		.practice{width:59px;}
+		.practice_btn{background-position: 0px -90px;}
+		.name{.fl();width:120px;}
+		.like{.fl(); margin-top:5px; margin-right:8px;}
+		.not_like{visibility:hidden;}
+	}
+
+/*个人资料页面*/
+.basic{
+	width:730px;
+	margin:27px auto;
+	font-size:12px;
+	overflow:hidden;
+
+	img, label, input, button, div, span{.fl();}
+	li{width:100%; overflow:hidden;}
+	.title{
+		width:100px;
+		height:23px;
+		line-height:23px;
+		font-size:18px;
+		color:#0099ff;
+	}
+	.container{
+		.border-radius();
+		width:608px;
+		padding:15px 7px;
+		border:1px solid #cccccc;
+		background:#fff;
+	}
+	label{color:#4c4c4c;}
+
+}
+	.basic_info{
+
+		img{
+			margin-left:7px;
+			width:60px; height:60px;
+		}
+		.upload_pic{
+			width:272px;
+			margin-left:22px;
+			label{width:100%;margin-bottom:15px; color:#808080;}
+			input{.input(153px; 23px; 1px solid #ccc; #ccc; #f3f3f3);}
+			.self_info_sbtn{margin-left:12px;}
+		}
+		.public{
+			.fr();
+			height:15px;line-height:15px;
+			color:#000;
+			font-size:12px;
+			input{margin-right:5px;}
+		}
+		.bi_item{
+			height:36px;
+			line-height:36px;
+			label{color:#4c4c4c;}
+			input[type="text"],input[type="password"]{color:#999; height:23px; line-height:23px; margin-top:7px;border:0px;}
+			input[type="text"]:focus{border:1px solid #1ea5ff;}
+			input[type="checkbox"],input[type="radio"]{margin-top:12px;margin-right:5px;}
+			.nick_name{margin-left:17px; width:43px;}
+		}
+			.bi_item_237{
+				width:237px;
+				label{ width:58px;}
+				input[type="text"]{width:150px;}
+				.ceilphone{width:85px;}
+			}
+			.bi_item_200{
+				width:200px;
+				label{width:85px;}
+				input[type="text"]{width:100px;}
+			}
+			.bi_item_170{
+				width:170px;
+				label{width:53px;}
+				span{margin-right:5px;}
+			}
+			.password{
+				width:100%;
+				label{width:62px;padding-left:17px;}
+				input[type="password"]{
+					.input(134px; 23px; 1px solid #ccc; #ccc; #f3f3f3);
+				}
+				input:focus{border:#1ea5ff; background:#fff;}
+				.verification_btn{margin-left:16px;margin-top:5px;}
+				input.verification_input{.input(68px; 23px; 1px solid #ccc; #ccc; #f3f3f3);margin-left:16px;}
+			}
+			.piano_com{
+				width:100%;
+				label{width:70px; padding-left:17px;}
+				.piano_input{width:140px;}
+				input.piano_invite{.input(152px; 23px; 1px solid #ccc; #ccc; #f3f3f3);margin-left:6px;}
+				span{color:#ccc; margin-left:6px;}
+				a{color:#0055ff; margin-left:6px; text-decoration:underline;}
+			}
+
+
+	}
+
+	.guitar_level{
+		color:#808080;
+		table, button, label, input, span, p{.fl();}
+		input[type="checkbox"]{margin-right:5px;margin-top:3px;}
+		table{
+			width:100%;
+
+			tr{vertical-align:top; height:27px;}
+			td{width:116px;}
+			td:first-child{width:92px;line-height:25px;}
+			.tr1{height:56px;}
+			.tr{height:25px;}
+			.tr3{height:60px;}
+			.tr4{height:32px;}
+			label{
+				margin-right:10px;	
+				color:#4c4c4c;
+			}
+			
+
+		}
+		input[type="text"]{color:#999; height:23px; line-height:23px;border:0px;}
+		input[type="text"]:focus{border:1px solid #1ea5ff;}
+		.music_company, .love_singer, .love_song, .hobby_band, .music_dream, .say_something{margin-right:0px;}
+		.music_company{width:65px;}
+		.love_singer{width:88px;}
+		.love_song{width:135px;}
+		.hobby_band, .music_dream{width:330px;}
+		.say_something{width:370px;}
+
+		.self_info_submit{
+			margin:0px auto auto 132px;
+		}
+	}

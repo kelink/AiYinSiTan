@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>支付页面</title>
+	<link rel="stylesheet/less" href="../media/less/screen.less" />
+	<script src="../media/js/less-1.5.0.min.js"></script>
+	<script type="text/javascript" src="../media/js/jquery-1.10.1.min.js"></script>
+	<script type="text/javascript" src="../media/js/script.js"></script>
+</head>
+<body>
+	<header>
+		<div class="header">
+			<a href="#">
+				<img src="../media/images/header_logo.png">
+				<h1>爱音思弹</h1>
+			</a>
+			<!-- 判断处于哪个页面选择显示是否显示个人中心或者游戏中心 -->
+			<a href="#" class="personal_or_game">
+				个人中心
+			</a> 
+			<!--<a href="#" class="personal_or_game">
+				游戏中心
+			</a>-->
+		</div>
+	</header>
+	<section class="main game_center">
+		<aside>
+			<div class="tips">
+				<h2>练习小提示<span>提示</span></h2>
+				<ul>
+					<li><label>●</label><p>用调音器调准音或软件调音 <a href="#">点击下载安装软件</a></p></li>
+					<li><label>●</label><p>选择你喜欢的游戏可选自带歌曲或自行购买喜欢的歌曲</p></li>
+					<li><label>●</label><p>等待加载，右键可以全屏</p></li>
+				</ul>
+			</div>
+			<div class="personal">
+				<img src="../media/images/head_portrait.png">
+				<h2><span class="level">18</span><span class="user_name">梁文正</span></h2>
+				<h3>用户类型</h3>
+				<h4>15分钟会员</h4>
+				<p><button class="login_submit">开通会员时间无限</button></p>
+				<p><button class="login_submit">邀请好友赢取时间</button></p>
+			</div>
+			
+		</aside>
+		<section class="game">
+			<div class="loading">
+				<h2>正在为您加载游戏.....</h2>
+				<p>右键可以全屏</p>
+			</div>
+		</section>
+		<section class="choose">
+			<div class="rank_list">
+				<h2>排行榜</h2>
+				<ul>
+					<li class="rank_first">
+						<span class="num">01.</span>
+						<img src="../media/images/special_pic.png">
+						<p>
+							<span class="song">来自星星的你</span>
+							<span class="rank">新手</span>
+						</p>
+					</li>
+					<li><span class="num">02.</span><span class="song">来自星星的你dddddddddd</span><span class="rank">新手</span></li>
+					<li><span class="num">03.</span><span class="song">来自星星的你</span><span class="rank">新手</span></li>
+					<li><span class="num">04.</span><span class="song">来自星星的你</span><span class="rank">新手</span></li>
+					<li><span class="num">05.</span><span class="song">来自星星的你</span><span class="rank">新手</span></li>
+					<li><span class="num">06.</span><span class="song">来自星星的你</span><span class="rank">新手</span></li>
+					<li><span class="num">07.</span><span class="song">来自星星的你</span><span class="rank">新手</span></li>
+					<li><span class="num">08.</span><span class="song">来自星星的你</span><span class="rank">新手</span></li>
+					<li><span class="num">09.</span><span class="song">来自星星的你</span><span class="rank">新手</span></li>
+				</ul>
+			</div>
+			<div class="choose_game">
+				<h2>选择游戏</h2>
+				<ul>
+					<li>
+						<div>
+							<img src="../media/images/fish.png">
+							<a href="#">
+								<h3>简单的游戏名字</h3><p>点击开始玩</p>
+							</a>
+						</div>
+					</li>
+					<li>
+						<div>
+							<img src="../media/images/fish.png">
+							<a href="#">
+								<h3>简单的游戏名字</h3><p>点击开始玩</p>
+							</a>
+						</div>
+					</li>
+					<li class="right_li">
+						<div>
+							<img src="../media/images/fish.png">
+							<a href="#">
+								<h3>简单的游戏名字</h3><p>点击开始玩</p>
+							</a>
+						</div>
+					</li>
+				</ul>
+				<button class="self_info_submit">游戏自带歌曲</button>
+			</div>
+			<div class="choose_song">
+				<h2>载入喜欢的歌曲</h2>
+				<table>
+					<tr>
+						<td class="first_td"></td><td class="sec_td">单曲名</td>
+						<td class="third_td">播放</td><td class="forth_td">马上练习</td>
+					</tr>
+					<tr>
+						<td><input type="checkbox"></td>
+						<td>我们所好的(张靓颖)</td>
+						<td><a href="#" class="play">播放</a></td>
+						<td><a href="#" class="listen">试听</a></td>
+					</tr>
+					<tr>
+						<td><input type="checkbox"></td>
+						<td>我们所好的(张靓颖)</td>
+						<td><a href="#" class="play">播放</a></td>
+						<td><a href="#" class="listen">试听</a></td>
+					</tr>
+					<tr>
+						<td><input type="checkbox"></td>
+						<td>我们所好的(张靓颖)</td>
+						<td><a href="#" class="play">播放</a></td>
+						<td><a href="#" class="listen">试听</a></td>
+					</tr>
+					<tr>
+						<td><input type="checkbox"></td>
+						<td>我们所好的(张靓颖)</td>
+						<td><a href="#" class="play">播放</a></td>
+						<td><a href="#" class="listen">试听</a></td>
+					</tr>
+				</table>
+				<button class="self_info_submit">练我喜欢的歌曲</button>
+			</div>
+		</section>
+	</section>
+	<section class="microgroove_hide">
+	</section>
+	<section class="microgroove_show">
+		<div class="practice_wrapper">
+			<div class="practice_song">
+				<div class="practice_head">
+					<h2>选择练习曲目</h2>
+					<div class="search_form">
+						<form>
+						<input type="text">
+						<input type="submit" value="搜索">
+						</form>
+					</div>
+				</div>
+				<table>
+				<tr>
+					<th class="first_td"></th><th class="sec_td">单曲名</th><th class="third_td">售价</th><th class="forth_td">购买练习</th>
+				</tr>
+				<tr>
+					<td><input type="checkbox"></td>
+					<td>我们所好的(张靓颖)</td>
+					<td><span>&#65509;0.99</span></td>
+					<td><a href="#">购买</a></td>
+				</tr>
+				<tr>
+					<td><input type="checkbox"></td>
+					<td>我们所好的(张靓颖)</td>
+					<td><span>&#65509;0.99</span></td>
+					<td><a href="#">购买</a></td>
+				</tr>
+				<tr>
+					<td><input type="checkbox"></td>
+					<td>我们所好的(张靓颖)</td>
+					<td><span>&#65509;0.99</span></td>
+					<td><a href="#">购买</a></td>
+				</tr>
+				<tr>
+					<td><input type="checkbox"></td>
+					<td>我们所好的(张靓颖)</td>
+					<td><span>&#65509;0.99</span></td>
+					<td><a href="#">购买</a></td>
+				</tr>
+				<tr>
+					<td><input type="checkbox"></td>
+					<td>我们所好的(张靓颖)</td>
+					<td><span>&#65509;0.99</span></td>
+					<td><a href="#">购买</a></td>
+				</tr>
+				<tr>
+					<td><input type="checkbox"></td>
+					<td>我们所好的(张靓颖)</td>
+					<td><span>&#65509;0.99</span></td>
+					<td><a href="#">购买</a></td>
+				</tr>
+				<tr>
+					<td><input type="checkbox"></td>
+					<td>我们所好的(张靓颖)</td>
+					<td><span>&#65509;0.99</span></td>
+					<td><a href="#">购买</a></td>
+				</tr>
+				<tr>
+					<td><input type="checkbox"></td>
+					<td>我们所好的(张靓颖)</td>
+					<td><span>&#65509;0.99</span></td>
+					<td><a href="#">购买</a></td>
+				</tr>
+				<tr>
+					<td><input type="checkbox"></td>
+					<td>我们所好的(张靓颖)</td>
+					<td><span>&#65509;0.99</span></td>
+					<td><a href="#">购买</a></td>
+				</tr>
+				<tr>
+					<td><input type="checkbox"></td>
+					<td>我们所好的(张靓颖)</td>
+					<td><span>&#65509;0.99</span></td>
+					<td><a href="#">购买</a></td>
+				</tr>
+				<tr>
+					<td><input type="checkbox"></td>
+					<td>我们所好的(张靓颖)</td>
+					<td><span>&#65509;0.99</span></td>
+					<td><a href="#">购买</a></td>
+				</tr>
+				<tr>
+					<td><input type="checkbox"></td>
+					<td>我们所好的(张靓颖)</td>
+					<td><span>&#65509;0.99</span></td>
+					<td><a href="#">购买</a></td>
+				</tr>
+				<tr>
+					<td><input type="checkbox"></td>
+					<td>我们所好的(张靓颖)</td>
+					<td><span>&#65509;0.99</span></td>
+					<td><a href="#">购买</a></td>
+				</tr>
+				<tr>
+					<td><input type="checkbox"></td>
+					<td>我们所好的(张靓颖)</td>
+					<td><span>&#65509;0.99</span></td>
+					<td><a href="#">购买</a></td>
+				</tr>
+				<tr>
+					<td><input type="checkbox"></td>
+					<td>我们所好的(张靓颖)</td>
+					<td><span>&#65509;0.99</span></td>
+					<td><a href="#">购买</a></td>
+				</tr>
+			</table>
+			</div>
+		</div>
+	</section>
+	<footer>
+		<div class="footer">
+			<img src="../media/images/footer_logo.png">
+			<h1>爱音思弹</h1>
+			<h2>Copyright © aiyinsitan 2013</h2>
+			<ul>
+				<li><a href="#">联系我们</a></li>
+				<li><a href="#">隐私条款</a></li>
+				<li><a href="#">关于爱音思弹公司</a></li>
+			</ul>
+		</div>
+	</footer>
+</body>
+</html>

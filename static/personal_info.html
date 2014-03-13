@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>站内信息</title>
+	<link rel="stylesheet/less" href="../media/less/personal_center.less" />
+	<script src="../media/js/less-1.5.0.min.js"></script>
+	<script type="text/javascript" src="../media/js/jquery-1.10.1.min.js"></script>
+</head>
+<body>
+	<a href="#" id="test">fff</a>
+	<header>
+		<div class="header">
+			<a href="#">
+				<img src="../media/images/header_logo.png">
+				<h1>爱音思弹</h1>
+			</a>
+
+			<nav class="nav">
+				<ul>
+					<li class="current_li"><a href="personal_info.html"><h2>个人资料</h2><span class="triangle">当前</span></a></li>
+					<li><a href="music_recommend.html"><h2>音乐推荐</h2><span class="triangle">当前</span></a></li>
+					<li><a href="my_friend.html"><h2>我的好友</h2><span class="triangle">当前</span></a></li>
+					<li><a href="member_rank.html"><h2>会员等级</h2><span class="triangle">当前</span></a></li>
+				</ul>
+			</nav>
+			<!-- 判断处于哪个页面选择显示是否显示个人中心或者游戏中心 -->
+			<!-- a href="#" class="personal_or_game">
+				个人中心
+			</a>-->
+			<a href="#" class="personal_or_game">
+				游戏中心
+			</a>
+		</div>
+	</header>
+	<section class="main personal_center">
+		<section class="basic basic_info">
+			<label class="title">基本信息</label>
+			<div class="container">
+				<form>
+				<ol>
+					<li>
+						<img src="../media/images/portrait.png">
+						<div class="upload_pic">
+							<label>默认头像</label>
+							<input type="text" placeholder="请上传20K-1M的照片">
+							<button class="self_info_sbtn">浏览</button>
+							<button class="self_info_sbtn">修改</button>
+						</div>
+
+						<label class="public">
+							<input type="checkbox"><span>选择公开</span>
+						</label>
+					</li>
+					<li>
+						<div class="bi_item bi_item_237"><label class="nick_name">昵称：</label><input type="text" value="梁文正"></span></div>
+						<div class="bi_item bi_item_200"><label><input type="checkbox">真实姓名：</label><input type="text" value="梁文正"></div>
+						<div class="bi_item bi_item_170">
+							<label>性别：</label>
+							<input type="radio" name="sex"><span>男</span><input type="radio" name="sex"><span>女</span>
+						</div>
+					</li>
+					<li>
+						<div class="bi_item bi_item_237"><label><input type="checkbox">邮箱： </label></label><input type="text" value="123456@qq.com"></span></div>
+						<div class="bi_item bi_item_237"><label class="ceilphone"><input type="checkbox">手机号码：</label><input type="text" value="123456789"></div>
+					</li>
+					<li>
+						<div class="bi_item password"><label>更改密码</label><input type="password"></div>
+						<div class="bi_item password">
+							<label>重复密码</label><input type="password">
+							<button class="verification_btn">发送验证码到邮箱</button>
+							<input type="text" class="verification_input" placeholder="输入验证码">
+						</div>
+					</li>
+					<li>
+						<div class="bi_item piano_com">
+							<label>所在琴行：</label>
+							<input type="text" value="爱音思弹XXX琴行" class="piano_input">
+							<input type="text" placeholder="琴行邀请码" class="piano_invite">
+							<span>(可不填)</span>
+							<a href="#">了解琴行合作</a>
+						</div>
+						
+					</li>
+				</ol>
+				</form>
+			</div>
+		</section>
+		<section class="basic guitar_level">
+			<label class="title">吉他水平</label>
+			<div class="container">
+				<form>
+					<table>
+						<tr class="tr">
+							<td><label>自我评价</label></td>
+							<td><input type="checkbox"><span>新手</span></td>
+							<td><input type="checkbox"><span>进阶</span></td>
+							<td><input type="checkbox"><span>中级</span></td>
+							<td><input type="checkbox"><span>高级</span></td>
+						</tr>
+						<tr class="tr">
+							<td><label>师承何处</label></td>
+							<td><input type="checkbox"><span>未开始</span></td>
+							<td><input type="checkbox"><span>自学</span></td>
+							<td><input type="checkbox"><span contenteditable="true" class="music_company"></span><span>琴行</span></td>
+						</tr>
+						<tr class="tr">
+							<td><label>学了多久</label></td>
+							<td><input type="checkbox"><span>真的新手</span></td>
+							<td><input type="checkbox"><span>1年之内</span></td>
+							<td><input type="checkbox"><span>2年之内</span></td>
+						</tr>
+						<tr class="tr3">
+							<td></td>
+							<td><input type="checkbox"><span>3年之内</span></td>
+							<td><input type="checkbox"><span>4年之内</span></td>
+							<td><input type="checkbox"><span>5年以上</span></td>
+						</tr>
+						<tr class="tr4">
+							<td colspan="2">
+								<label>喜爱的歌星：</label><input type="text" value="周笔畅" class="love_singer">
+							</td>
+							<td colspan="2">
+								<label>喜爱的歌曲：</label><input type="text" value="别爱我像爱个朋友" class="love_song">
+							</td>
+						</tr>
+						<tr class="tr4">
+							<td colspan="4">
+								<label>对乐队的兴趣：</label>
+								<input type="text" class="hobby_band" value="black eyes">
+							</td>
+						</tr>
+						<tr class="tr4">
+							<td colspan="5">
+								<label>我的音乐梦想：</label>
+								<input type="text" class="music_dream" value="一直唱喜爱的歌">
+							</td>
+						</tr>
+						<tr class="tr4">
+							<td colspan="5">
+								<label>相对热爱音乐的朋友说点什么：</label>
+								<input type="text" class="say_something">
+							</td>
+						</tr>
+					</table>
+				</form>
+			</div>
+		</section>
+	</section>
+	<footer>
+		<div class="footer">
+			<img src="../media/images/footer_logo.png">
+			<h1>爱音思弹</h1>
+			<h2>Copyright © aiyinsitan 2013</h2>
+			<ul>
+				<li><a href="#">联系我们</a></li>
+				<li><a href="#">隐私条款</a></li>
+				<li><a href="#">关于爱音思弹公司</a></li>
+			</ul>
+		</div>
+	</footer>
+
+</body>
+</html>

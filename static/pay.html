@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>支付页面</title>
+	<link rel="stylesheet/less" href="../media/less/screen.less" />
+	<script src="../media/js/less-1.5.0.min.js"></script>
+	<script type="text/javascript" src="../media/js/jquery-1.10.1.min.js"></script>
+	<script type="text/javascript" src="../media/js/script.js"></script>
+</head>
+<body>
+	<header>
+		<div class="header">
+			<a href="#">
+				<img src="../media/images/header_logo.png">
+				<h1>爱音思弹</h1>
+			</a>
+			<!-- 判断处于哪个页面选择显示是否显示个人中心或者游戏中心 -->
+			<a href="#" class="personal_or_game">
+				个人中心
+			</a> 
+			<!--<a href="#" class="personal_or_game">
+				游戏中心
+			</a>-->
+		</div>
+	</header>
+	<section class="main">
+		<section class="pay_form">
+			<form>
+				<h2>
+					支付页面
+				</h2>
+				<ol>
+					<li>
+						<label>开通对象：</label>
+						<input type="text" placeholder="自己或他人的邮箱" class="pay_email">
+					</li>
+					<li>
+						<label>开通套餐：</label>
+						<ul class="combo">
+							<li>
+								<a href="#"><span>月亮套餐</span><span class="tick">选中</span></a>
+								<div class="moom">游戏时间无限<span></span></div>
+							</li>
+							<li>
+								<a href="#" class="current"><span>太阳套餐</span><span class="tick">选中</span></a>
+								<div class="sun">游戏时间无限<br>任意选择关卡<span></span></div>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<label>开通时长：</label>
+						<ul class="during_time">
+							<li>
+								<a href="#"><span>一周体验</span><span class="tick">选中</span></a>
+							</li>
+							<li>
+								<a href="#" class="current"><span>一个月</span><span class="tick">选中</span></a>
+							</li>
+							<li>
+								<a href="#"><span>三个月</span><span class="tick">选中</span></a>
+							</li>
+							<li>
+								<a href="#"><span>半年</span><span class="tick">选中</span></a>
+							</li>
+							<li>
+								<a href="#"><span>一年</span><span class="tick">选中</span></a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<label>开通方式：</label>
+						<a href="#" class="pay_way current"><span>支付宝</span><span class="tick">选中</span></a>
+					</li>
+					<li>
+						<label>应付金额：</label>
+						<span><b>10</b>元</span>
+					</li>
+					<li class="clause">
+						<input type="checkbox"><span>接受并同意</span><a href="#">爱音思弹会员服务条款</a>
+					</li>
+				</ol>
+				<button class="self_info_submit">去支付宝付款</button>
+			</form>
+		</section>
+	</section>
+	<footer>
+		<div class="footer">
+			<img src="../media/images/footer_logo.png">
+			<h1>爱音思弹</h1>
+			<h2>Copyright © aiyinsitan 2013</h2>
+			<ul>
+				<li><a href="#">联系我们</a></li>
+				<li><a href="#">隐私条款</a></li>
+				<li><a href="#">关于爱音思弹公司</a></li>
+			</ul>
+		</div>
+	</footer>
+</body>
+</html>

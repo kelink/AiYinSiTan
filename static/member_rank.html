@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>站内信息</title>
+	<link rel="stylesheet/less" href="../media/less/personal_center.less" />
+	<script src="../media/js/less-1.5.0.min.js"></script>
+	<script type="text/javascript" src="../media/js/jquery-1.10.1.min.js"></script>
+	<script type="text/javascript" src="../media/js/script.js"></script>
+</head>
+<body>
+	<header>
+		<div class="header">
+			<a href="#">
+				<img src="../media/images/header_logo.png">
+				<h1>爱音思弹</h1>
+			</a>
+
+			<nav class="nav">
+				<ul>
+					<li><a href="personal_info.html"><h2>个人资料</h2><span class="triangle">当前</span></a></li>
+					<li><a href="music_recommend.html"><h2>音乐推荐</h2><span class="triangle">当前</span></a></li>
+					<li><a href="my_friend.html"><h2>我的好友</h2><span class="triangle">当前</span></a></li>
+					<li class="current_li"><a href="member_rank.html"><h2>会员等级</h2><span class="triangle">当前</span></a></li>
+				</ul>
+			</nav>
+			<!-- 判断处于哪个页面选择显示是否显示个人中心或者游戏中心 -->
+			<!-- a href="#" class="personal_or_game">
+				个人中心
+			</a>-->
+			<a href="#" class="personal_or_game">
+				游戏中心
+			</a>
+		</div>
+	</header>
+	<section class="main personal_center">
+		<table class="member_rank_table">
+			<tr>
+				<th><span class="type">会员类型</span></th><th><span class="intro">说明</span></th>
+				<th><span class="time">游戏时间</span></th><th><span class="price">价格</span></th>
+			</tr>
+			<tr>
+				<td><span class="type">小星星账户<img src="../media/images/little_star.png"></span></td><td><span class="intro">用户完成注册信息，（不）完善信息（没琴行邀请码）。</span></td>
+				<td><span class="time">10min/天</span></td><td><span class="price">-</span></td>
+			</tr>
+			<tr>
+				<td><span class="type">星星账户<img src="../media/images/star.png"></span></td><td><span class="intro">用户完成注册信息，完成完善信息（有琴行邀请码）。</span></td>
+				<td><span class="time">30min/天</span></td><td><span class="price">-</span></td>
+			</tr>
+			<tr>
+				<td><span class="type">月亮账户<img src="../media/images/moon.png"></span></td><td><span class="intro">用户完成注册信息，完成完善信息，购买此套餐。</span></td>
+				<td><span class="time">无限</span></td><td><span class="price">10元/天</span></td>
+			</tr>
+			<tr>
+				<td><span class="type">太阳账户<img src="../media/images/sun.png"></span></td><td><span class="intro">用户完成注册信息，完成完善信息，购买此套餐，关卡可随意选。</span></td>
+				<td><span class="time">无限</span></td><td><span class="price">15元/天</span></td>
+			</tr>
+			<tr>
+				<td colspan="4" class="table_bottom">
+					<div>
+					<b>邀请以下好友加入，即可获得3min分钟游戏时间，最高奖励为15min</b>
+					<button class="login_submit">开通会员时间无限</button>
+					<button class="login_submit">邀请好友赢取时间</button>
+					</div>
+				</td>
+			</tr>
+		</table>
+		<div class="rank_system">
+			<h4>等级制度</h4>
+			<ul class="first_col">
+				<li><label>1-10级：</label><p>游戏积分1-1000，每100分递增一级</p></li>
+				<li><label>1-10级：</label><p>游戏积分1-1000，每100分递增一级</p></li>
+				<li><label>1-10级：</label><p>游戏积分1-1000，每100分递增一级</p></li>
+				<li><label>1-10级：</label><p>游戏积分1-1000，每100分递增一级</p></li>
+				<li><label>1-10级：</label><p>游戏积分1-1000，每100分递增一级</p></li>
+			</ul>
+			<ul class="second_col">
+				<li><label>1-10级：</label><p>游戏积分1-1000，每100分递增一级</p></li>
+				<li><label>1-10级：</label><p>游戏积分1-1000，每100分递增一级</p></li>
+				<li><label>1-10级：</label><p>游戏积分1-1000，每100分递增一级</p></li>
+				<li><label>1-10级：</label><p>游戏积分1-1000，每100分递增一级</p></li>
+				<li><label>1-10级：</label><p>游戏积分1-1000，每100分递增一级</p></li>
+			</ul>
+			<p>终身成就奖：游戏积分>365000</p>
+		</div>
+	</section>
+	<footer>
+		<div class="footer">
+			<img src="../media/images/footer_logo.png">
+			<h1>爱音思弹</h1>
+			<h2>Copyright © aiyinsitan 2013</h2>
+			<ul>
+				<li><a href="#">联系我们</a></li>
+				<li><a href="#">隐私条款</a></li>
+				<li><a href="#">关于爱音思弹公司</a></li>
+			</ul>
+		</div>
+	</footer>
+</body>
+</html>

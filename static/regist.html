@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>注册完善</title>
+	<link rel="stylesheet/less" href="../media/less/screen.less" />
+	<script src="../media/js/less-1.5.0.min.js"></script>
+	<script type="text/javascript" src="../media/js/jquery-1.10.1.min.js"></script>
+	<script type="text/javascript" src="../media/js/script.js"></script>
+</head>
+<body>
+	<header>
+		<div class="header">
+			<a href="#">
+				<img src="../media/images/header_logo.png">
+				<h1>爱音思弹</h1>
+			</a>
+			<!-- 判断处于哪个页面选择显示是否显示个人中心或者游戏中心 -->
+			<<!-- a href="#" class="personal_or_game">
+				个人中心
+			</a> 
+			<a href="#" class="personal_or_game">
+				游戏中心
+			</a>-->
+		</div>
+	</header>
+	<section class="main self_info">
+		<h1>完善个人信息<a href="#">>>返回登录页面</a></h1>
+		<nav>
+			<ul>
+				<li>
+					<a href="#" class="current">请务必填写<span></span></a>
+
+				</li>
+				<li>
+					<a href="#">请选择填写</a>
+				</li>
+			</ul>
+		</nav>
+		<section class="necessary">
+			<form>
+				<img src="../media/images/portrait.png">
+				<ol>
+					<li>
+						
+						<label>默认头像</label>
+						<input type="text" id="upload">
+						<button class="self_info_sbtn" id="test">浏览</button>
+						<button class="self_info_sbtn">修改</button>
+						<input type="file" id="posterToUpload">
+						<script type="text/javascript">
+						$("#test").click(function(){
+							$('#posterToUpload').trigger('click');
+							return false;
+						});
+						$('#posterToUpload').bind('change',function(){
+							//IE下需要等待用户点击上传
+							$("#upload").val($("#posterToUpload").val());
+						});
+						</script>
+					</li>
+
+					<li>
+						<input type="text" placeholder="琴行邀请码">
+						<span class="donot_fill">（可不填）</span>
+						<a href="#">了解琴行合作</a>
+					</li>
+					<li>
+						<label>真实信息</label>
+						<p>
+							<input type="text" placeholder="真实姓名">
+							<span class="must_fill">*用于办法音乐证书</span>
+						</p>
+						<p>
+							<input type="text" placeholder="手机号码">
+							<span class="must_fill">*仅用于办法音乐证书</span>
+						</p>
+						<!-- 注意：判断是否是第三方登陆再显示
+						<p>
+							<input type="text" placeholder="邮箱" class="email">
+						</p>
+						<p>
+							<input type="text" placeholder="密码" class="email">
+						</p>
+						<p>
+							<input type="text" placeholder="输入邮箱验证码" class="verification_code">
+							<button class="verification_btn">发送验证码到邮箱</button>
+						</p> -->
+					</li>
+				</ol>
+				<button class="self_info_submit">
+					提&nbsp&nbsp&nbsp&nbsp交
+				</button>
+			</form>
+		</section>
+		<section class="optional">
+			<form>
+				<table>
+					<tr class="tr1">
+						<td><label>师承何处</label></td>
+						<td><input type="checkbox"><span>未开始</span></td>
+						<td><input type="checkbox"><span>自学</span></td>
+						<td><input type="checkbox"><span contenteditable="true" class="music_company"></span><span>琴行</span></td>
+					</tr>
+					<tr class="tr2">
+						<td><label>学了多久</label></td>
+						<td><input type="checkbox"><span>真的新手</span></td>
+						<td><input type="checkbox"><span>1年之内</span></td>
+						<td><input type="checkbox"><span>2年之内</span></td>
+					</tr>
+					<tr class="tr3">
+						<td></td>
+						<td><input type="checkbox"><span>3年之内</span></td>
+						<td><input type="checkbox"><span>4年之内</span></td>
+						<td><input type="checkbox"><span>5年以上</span></td>
+					</tr>
+					<tr class="tr4">
+						<td colspan="2">
+							<label>喜爱的歌星：</label><span contenteditable="true" class="love_singer"></span>
+						</td>
+						<td colspan="2">
+							<label>喜爱的歌曲：</label><span contenteditable="true" class="love_song"></span>
+						</td>
+					</tr>
+					<tr class="tr4">
+						<td colspan="4">
+							<label>对乐队的兴趣：</label>
+							<span contenteditable="true" class="hobby_band"></span>
+						</td>
+					</tr>
+					<tr class="tr4">
+						<td colspan="4">
+							<label>我的音乐梦想：</label>
+							<span contenteditable="true" class="music_dream"></span>
+						</td>
+					</tr>
+					<tr class="tr4">
+						<td colspan="4">
+							<label>相对热爱音乐的朋友说点什么：</label>
+							<span contenteditable="true" class="say_something"></span>
+						</td>
+					</tr>
+				</table>
+				<p><input type="checkbox"><span>公开以上信息</span></p>
+				<button class="self_info_submit">
+					提&nbsp&nbsp&nbsp&nbsp交
+				</button>
+			</form>
+		</section>
+	</section>
+	<section class="about_popup">
+		<span>关闭</span>
+		亲爱的琴行负责人：<br>       
+			&nbsp&nbsp&nbsp&nbsp本网站提供吉他的练习服务，每个学员课后可以登录我们的网页进行练习巩固所学的吉他内容，过程轻松有趣，能摆脱以往枯燥的练习过程，而且能正确判断正误，成为你学员的一个24小时的吉他练习教练。<br>
+			&nbsp&nbsp&nbsp&nbsp而且现在对广大的琴行的音乐学员免费开放<br>
+			&nbsp&nbsp&nbsp&nbsp欢迎致电 <b>18826401056</b>
+
+	</section>
+	<footer>
+		<div class="footer">
+			<img src="../media/images/footer_logo.png">
+			<h1>爱音思弹</h1>
+			<h2>Copyright © aiyinsitan 2013</h2>
+			<ul>
+				<li><a href="#">联系我们</a></li>
+				<li><a href="#">隐私条款</a></li>
+				<li><a href="#">关于爱音思弹公司</a></li>
+			</ul>
+		</div>
+	</footer>
+</body>
+</html>

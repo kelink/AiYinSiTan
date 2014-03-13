@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>站内信息</title>
+	<link rel="stylesheet/less" href="../media/less/personal_center.less" />
+	<script src="../media/js/less-1.5.0.min.js"></script>
+	<script type="text/javascript" src="../media/js/jquery-1.10.1.min.js"></script>
+	<script type="text/javascript" src="../media/js/script.js"></script>
+</head>
+<body>
+	<header>
+		<div class="header">
+			<a href="#">
+				<img src="../media/images/header_logo.png">
+				<h1>爱音思弹</h1>
+			</a>
+
+			<nav class="nav">
+				<ul>
+					<li><a href="personal_info.html"><h2>个人资料</h2><span class="triangle">当前</span></a></li>
+					<li class="current_li"><a href="music_recommend.html"><h2>音乐推荐</h2><span class="triangle">当前</span></a></li>
+					<li><a href="my_friend.html"><h2>我的好友</h2><span class="triangle">当前</span></a></li>
+					<li><a href="member_rank.html"><h2>会员等级</h2><span class="triangle">当前</span></a></li>
+				</ul>
+			</nav>
+			<!-- 判断处于哪个页面选择显示是否显示个人中心或者游戏中心 -->
+			<!-- a href="#" class="personal_or_game">
+				个人中心
+			</a>-->
+			<a href="#" class="personal_or_game">
+				游戏中心
+			</a>
+		</div>
+	</header>
+	<section class="main personal_center">
+		<div class="pc_record">
+			<div class="big_disc">
+				<div class="starBtn_bg">
+					<a href="#" class="start_play"></a>
+				</div>
+				<div class="operate_contain">
+					<div class="opBtn_bg love">
+						<a href="#"></a>
+					</div>
+					<div class="opBtn_bg not_love">
+						<a href="#"></a>
+					</div>
+					
+					<div class="opBtn_bg next">
+						<a href="#"></a>
+					</div>
+					<div class="opBtn_bg replay">
+						<a href="#"></a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="pc_record_list">
+			<div class="music rd_new_song">
+				<h2>最新练习曲</h2>
+				<table>
+					<tr>
+						<th class="checkbox"></th><th><span>单曲名</span></th>
+						<th class="price"><span>售价</span></th>
+						<th class="listen"><span>试听</span></th><th class="buy"><span>购买练习</span></th>
+					</tr>
+					<tr>
+						<td><input type="checkbox"></td><td><span class="name">我们所好的(张靓颖)</span></td>
+						<td><span class="price_span">&#65509;0.99</span></td>
+						<td><a href="#" class="rd_song listen_btn">试听</a></td><td><a href="#" class="rd_song buy_btn">购买练习</a></td>
+					</tr>
+					<tr>
+						<td><input type="checkbox"></td><td><span class="name">我们所好的(张靓颖)</span></td>
+						<td><span class="price_span">&#65509;0.99</span></td>
+						<td><a href="#" class="rd_song listen_btn">试听</a></td><td><a href="#" class="rd_song buy_btn">购买练习</a></td>
+					</tr>
+					<tr>
+						<td><input type="checkbox"></td><td><span class="name">我们所好的(张靓颖)</span></td>
+						<td><span class="price_span">&#65509;0.99</span></td>
+						<td><a href="#" class="rd_song listen_btn">试听</a></td><td><a href="#" class="rd_song buy_btn">购买练习</a></td>
+					</tr>
+					<tr>
+						<td><input type="checkbox"></td><td><span class="name">我们所好的(张靓颖)</span></td>
+						<td><span class="price_span">&#65509;0.99</span></td>
+						<td><a href="#" class="rd_song listen_btn">试听</a></td><td><a href="#" class="rd_song buy_btn">购买练习</a></td>
+					</tr>
+					<tr>
+						<td><input type="checkbox"></td><td><span class="name">我们所好的(张靓颖)</span></td>
+						<td><span class="price_span">&#65509;0.99</span></td>
+						<td><a href="#" class="rd_song listen_btn">试听</a></td><td><a href="#" class="rd_song buy_btn">购买练习</a></td>
+					</tr>
+					
+				</table>
+			</div>
+			<div class="music rd_my_song">
+				<h2>我的音乐橱窗</h2>
+				<table>
+					<tr>
+						<th class="checkbox"></th><th><span>单曲名</span></th>
+						<th class="listen"><span>播放</span></th><th class="practice"><span>马上练习</span></th>
+					</tr>
+					<tr>
+						<td><input type="checkbox"></td><td><span class="name">我们所好的(张靓颖)</span><span class="rd_song like"></span></td>
+						<td><a href="#" class="rd_song listen_btn">播放</a></td><td><a href="#" class="rd_song practice_btn">马上练习</a></td>
+					</tr>
+					<tr>
+						<td><input type="checkbox"></td><td><span class="name">我们所好的(张靓颖)</span><span class="rd_song not_like"></span></td>
+						<td><a href="#" class="rd_song listen_btn">播放</a></td><td><a href="#" class="rd_song practice_btn">马上练习</a></td>
+					</tr>
+					<tr>
+						<td><input type="checkbox"></td><td><span class="name">我们所好的(张靓颖)</span><span class="rd_song like"></span></td>
+						<td><a href="#" class="rd_song listen_btn">播放</a></td><td><a href="#" class="rd_song practice_btn">马上练习</a></td>
+					</tr>
+					<tr>
+						<td><input type="checkbox"></td><td><span class="name">我们所好的(张靓颖)</span><span class="rd_song like"></span></td>
+						<td><a href="#" class="rd_song listen_btn">播放</a></td><td><a href="#" class="rd_song practice_btn">马上练习</a></td>
+					</tr>
+					<tr>
+						<td><input type="checkbox"></td><td><span class="name">我们所好的(张靓颖)</span><span class="rd_song like"></span></td>
+						<td><a href="#" class="rd_song listen_btn">播放</a></td><td><a href="#" class="rd_song practice_btn">马上练习</a></td>
+					</tr>
+
+				</table>
+			</div>
+		</div>
+	</section>
+	<footer>
+		<div class="footer">
+			<img src="../media/images/footer_logo.png">
+			<h1>爱音思弹</h1>
+			<h2>Copyright © aiyinsitan 2013</h2>
+			<ul>
+				<li><a href="#">联系我们</a></li>
+				<li><a href="#">隐私条款</a></li>
+				<li><a href="#">关于爱音思弹公司</a></li>
+			</ul>
+		</div>
+	</footer>
+</body>
+</html>

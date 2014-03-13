@@ -1,0 +1,212 @@
+@import "preboot.less";
+
+/*image path*/
+@images-path:                         "../images";
+
+/*global width*/
+@global-width:                        960px;
+
+/*basic background color*/
+@basic-background-color:              #fff;
+@header-footer-bgcolor:				  #333;
+@login-background-color:			  #f3f3f3;
+
+/*fonts style*/
+@basic-fonts-style:                   "微软雅黑"; 
+
+/*fonts color*/
+@basic-fonts-color:                   #4d4d4d;
+@nav-fonts-color:                     @basic-fonts-color;
+@nav-fonts-visited-color:             #ff5a21;
+@title-color:                         #ff7f21;
+
+/*fonts weight*/
+@basic-fonts-size:                  14px;
+
+
+
+/*border radius*/
+.border-radius(@radius : 5px) {
+  -webkit-border-radius: @radius;
+     -moz-border-radius: @radius;
+          border-radius: @radius;
+}
+.border-top-left-radius(@radius : 5px) {
+  -webkit-border-top-left-radius: @radius;
+     -moz-border-top-left-radius: @radius;
+          border-top-left-radius: @radius;
+}
+.border-top-right-radius(@radius : 5px) {
+  -webkit-border-top-right-radius: @radius;
+     -moz-border-top-right-radius: @radius;
+          border-top-right-radius: @radius;
+}
+.border-bottom-left-radius(@radius : 5px) {
+  -webkit-border-bottom-left-radius: @radius;
+     -moz-border-bottom-left-radius: @radius;
+          border-bottom-left-radius: @radius;
+}
+.border-bottom-right-radius(@radius : 5px) {
+  -webkit-border-bottom-right-radius: @radius;
+     -moz-border-bottom-right-radius: @radius;
+          border-bottom-right-radius: @radius;
+}
+
+
+
+/*float*/
+.fl(){float: left;display: inline;}
+.fr(){float: right;display: inline;}
+
+/*text overflow*/
+.text-overflow() {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+
+/*button class*/
+.btn(@background; @font-size; @width:90px; @height:40px; @color:#f3f3f3; @radius:5px){
+  background:@background;
+  width:@width;
+  height:@height;
+  line-height:@height;
+  color:@color;
+  font-size:@font-size;
+  .border-radius(@radius);
+}
+
+/*input text class*/
+.input(@width; @height; @border; @font-color; @background:#fff){
+	width:@width;
+	height:@height;
+	line-height:@height;
+	border:@border;
+	color:@font-color;
+	padding-left:5px;
+	background:@background;
+}
+
+body, html{
+  background : @basic-background-color;
+  font-size:@basic-fonts-size;
+  font-family:"微软雅黑";
+  color : @basic-fonts-color;
+}
+
+/*header start*/
+header{
+	.text-overflow();
+	width:100%;
+	height: 80px;
+	background: @header-footer-bgcolor;
+}
+	.header, .footer{
+		.center-block();
+		.text-overflow();
+		width:@global-width;
+		height:72px;
+	}
+
+	.header{
+		margin-top:8px;
+		a{
+			.fl();
+			margin-left:10px;
+		}
+		img{
+			.fl();
+		}
+		h1{
+			.fl();
+			line-height:63px;
+			color: #fff;
+			font-size: 24px;
+			margin-left:14px;
+		}
+		.personal_or_game{
+			.fr();
+			color:#f0f0f0;
+			margin-right:5px;
+			margin-top:37px;
+		}
+	}
+.wrapper{
+	width:100%;
+	height:auto;
+	background:#f3f3f3;
+	.text-overflow();
+}
+.main{
+	.center-block();
+	.text-overflow();
+	width:@global-width;
+	min-height:300px;
+}
+footer{
+	.text-overflow();
+	width:100%;
+	height: 68px;
+	background: @header-footer-bgcolor;
+}
+	.footer{
+		margin-top:15px;
+
+		img{
+			.fl();
+			margin-left:10px;
+		}
+		h1, h2{.fl();line-height:41px;color:#a39c9c;}
+		h1{
+			margin-left:6px;
+			font-size:16px;
+		}
+		h2{
+			font-size:14px;
+			margin-left:32px;
+		}
+		ul{
+			.fr();
+			margin-right:8px;
+			li{
+				.fr();
+				margin-left:34px;
+				a{
+					display:block;
+					line-height:41px;
+					color:#a39c9c;
+				}
+			}
+		}
+	}
+
+
+
+/*一些挂件*/
+
+@self_info_sbtn_height: 25px;
+
+/*注册完善页的input[text]样式*/
+/*.self_info_text{
+	.input(153px, 28px, 1px solid #cccccc, #bfbfbf, #f3f3f3);
+}*/
+/*注册完善页的按钮*/
+.self_info_sbtn{
+	width:44px;
+	height:@self_info_sbtn_height;
+	color:#fff;
+	background:#cccccc;
+}
+
+.self_info_submit{
+	.btn(url("@{images-path}/self_info_btnbg.png") repeat-x, 16px, 140px, 40px);
+}
+/*登陆页面的按钮*/
+.login_submit{
+	.btn(url("@{images-path}/regisit_btnbg.png") repeat-x, 16px, 140px, 40px);
+}
+.verification_btn{
+	.btn(url("@{images-path}/verification_code.png") repeat-x, 10.89px, 101px, 25px);
+}
+
