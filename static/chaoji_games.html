@@ -26,10 +26,10 @@
 	<section class="main">
 		<nav>
 			<ul>
-				<li><a href="#" data-target="news">最新资讯</a></li>
-				<li><a href="#">学生管理</a></li>
-				<li><a href="#">琴行管理员管理</a></li>
-				<li><a href="#" class="current">歌曲和游戏管理</a></li>
+				<li><a href="#">最新资讯</a></li>
+				<li><a href="chaoji_student.html">学生管理</a></li>
+				<li><a href="chaoji_manager.html">琴行管理员管理</a></li>
+				<li><a href="chaoji_games.html" class="current">歌曲和游戏管理</a></li>
 			</ul>
 		</nav>
 		<section class="game">
@@ -100,16 +100,38 @@
 					<td><span class="edit_song"><a href="#">编辑歌曲</a></span></td><td class="choose"><input type="checkbox"></td>
 				</tr>
 				<tr>
-					<td class="table_bottom" colspan="14">
+					<td class="table_bottom" colspan="6">
 						<ul>
-							<li><input type="checkbox"><span>全选</span></li>
-							<li><input type="checkbox"><span>反选</span></li>
+							<li><input type="checkbox" class="allSelect"><span>全选</span></li>
+							<li><input type="checkbox" class="oppositeSelect"><span>反选</span></li>
 							<li><a href="#" class="delete">删除已选</a></li>
 							<li><a href="#" class="edit">编辑已选</a></li>
 						</ul>
 					</td>
 				</tr>
 			</table>
+			<form class="table_edit">
+				<div class="te_div">
+					<table>
+						<tr>
+							<th><span class="name">游戏名称</span></th>
+							<th><span class="level">关卡数</span></th>
+							<th><span class="song">游戏所含歌曲</span></th>
+						</tr>
+						<tr>
+							<td><input class="name" type="text"></td>
+							<td><input class="level" type="text"></td>
+							<td><span class="song">思念是一种病；思念是一种病；思念是一种病；思念是一种病；</span></td>
+						</tr>
+						<tr>
+							<td><input class="name" type="text"></td>
+							<td><input class="level" type="text"></td>
+							<td><span class="song">思念是一种病；思念是一种病；思念是一种病；思念是一种病；</span></td>
+						</tr>
+					</table>
+				</div>
+				<input type="submit" value="取消" class="houtai_cancel"><input type="submit" value="保存" class="houtai_save">
+			</form>
 			<div class="jump_to">
 				<form>
 					<span>转到</span><input type="text"><span>页</span><input type="submit" value="提交">
@@ -139,5 +161,16 @@
 			</ul>
 		</div>
 	</footer>
+	<script type="text/javascript">
+	$(".edit").click(function(){
+		editForm(".table",".table_edit");
+		editItemGame(".table", ".table_edit table");
+	});
+	$(".houtai_cancel").click(function(){
+		editForm(".table_edit",".table");
+	});
+	xuan(".allSelect");
+	fanxuan(".oppositeSelect");
+	</script>
 </body>
 </html>

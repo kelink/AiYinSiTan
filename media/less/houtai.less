@@ -13,6 +13,7 @@ body{background:#f7f7f7;}
 		line-height:16px;
 		margin-top:24px;
 		a{color:#fff;.fr();}
+
 	}
 }
 	.logout{border-left:2px #fff solid;padding-left:10px;}
@@ -26,11 +27,11 @@ body{background:#f7f7f7;}
 		input[type="submit"]{
 			background:url("@{images-path}/search.png") no-repeat;
 			border:0px;
-			width:28px; height:22px;
+			width:28px; height:21px;
 			text-indent:-9999px;
 		}
 		input[type="text"]{
-			width:150px;height:22px;
+			width:150px;height:21px;
 			border:0px;
 			font-size:12px;
 		}
@@ -61,12 +62,18 @@ nav{
 			height:31px;line-height:31px;
 		}
 		a.current{background:#fff;}
+		span{
+			display:block;
+			background:url("@{images-path}/houtai.png") no-repeat;
+			padding-left:30px;
+		}
+		.nav_message{background-position:0px -41px;}
+		.nav_taocan{background-position: 0px -82px;}
 	}
 }
-
-.news, .manager, .game{
+/*超级管理员页面*/
+.news, .manager, .game,{
 	.fr();
-	width:774px;
 	height:410px;
 	margin-top:20px;
 	margin-right:19px;
@@ -79,6 +86,19 @@ nav{
 		.type, .level, .month_score, .high_score{width:68px;}
 		.last_time{width:91px;}
 		.times{width:58px;}
+
+		.table_edit{
+			.name{width:60px;padding-left:0px;}
+			.nick_name, .email, .password, .piano_com{width:35px;}
+			.ceilphone, .active_code{width:46px;}
+			.choose{width:26px;}
+			.type, .level, .month_score, .high_score{width:57px;}
+			.last_time{width:81px;}
+			.times{width:65px;}
+			.name,.nick_name, .email, .password, .piano_com,.ceilphone, .active_code,.type, .level, .month_score, .high_score,
+			.last_time,.times
+			{margin-left:2px;margin-right:2px;}
+		}
 	}
 	.manager{
 		.email{width:62px;padding-left:10px;}
@@ -87,6 +107,16 @@ nav{
 		.piano_com, .op_time, .type, .open_time, .end_time{width:87px;}
 		.ceil_phone{width:100px;}
 		.choose{width:26px;}
+
+		.table_edit{
+			span{display:block;}
+			.email(width:52px;)
+			.passwork{width:54px;}
+			.invite_code{width:65px;}
+			.piano_com, .op_time, .type, .open_time, .end_time{width:77px;}
+			.ceil_phone{width:90px;}
+			.email, .passwork, invite_code, .piano_com, .op_time, .type, .open_time, .end_time,.ceil_phone{margin:0 4px;padding:0px;}
+		}
 	}
 	.game{
 		.name{width:100px;padding-left:10px;}
@@ -96,6 +126,13 @@ nav{
 		.edit_song{width:89px;}
 		.choose{width:26px;}
 		a{color:#0055ff;}
+
+		.table_edit{
+			span{display:block;}
+			.name, .level{width:80px;}
+			.song{width:578px;}
+			.name, .level, .song{margin:0 5px;padding:0px;}
+		}
 	}
 	.table{
 		border:1px solid #999999;
@@ -119,13 +156,43 @@ nav{
 
 			ul{margin-left:10px;}
 			li, input, span, a{.fl();}
-			li{padding-right:25px;}
+			li{padding-right:25px;padding-top:5px;}
 			input{margin-right:6px;}
 
 			a{background:url("@{images-path}/super_manage.png") no-repeat; padding-left:18px; color:#999999;height:15px;line-height:15px;}
 			.delete{background-position:0px 0px;}
 			.edit{background-position: 0px -25px;}
+			.select{
+				span{color:#999999;margin-top:2px;}
+				select{
+					width:88px; height:20px;
+					line-height:20px;
+					border:1px solid #999999;
+					margin-left:5px;
+					font-size:10px;
+				}
+				
+			}
 		}
+	.table_edit{
+		display:none;
+		height:350px;
+		background:#cdeeff;
+		border:1px solid #999999;
+
+		.te_div{height:320px;overflow-x:hidden;}
+		tr{height:35px;}
+		th{background:#fff;}
+		
+
+		.houtai_cancel, .houtai_save{
+			.btn(#fff; 12px; 50px;18px; #66ccff; 0px;);
+			.fr();
+			border:0px;
+			margin-right:10px;
+			margin-bottom:10px;
+		}
+	}
 	.jump_to{
 		.fr();
 		height:18px;
@@ -167,3 +234,175 @@ nav{
 			}
 		}
 	}
+
+	.houtai_table{
+		border:1px solid #999999;
+		tr{height:27px; line-height:27px;}
+		th{border-bottom:1px solid #999999;background:#4cc3ff;}
+		td,th{
+			border-right:1px solid #999999;
+			text-align:center;
+			.ht_span{
+				width:120px;
+				display:block;
+				white-space:normal;
+			}
+			.ht_span_code{
+				width:110px;
+				display:block;
+				white-space:normal;
+			}
+			.apply_not{
+				width:50px; height:25px;
+				background:#f1902a;
+				color:#fff;
+				margin:2px 5px;
+			}
+			
+		}
+		td{
+			.ht_beizhu{
+				width:400px;
+				display:block;
+				white-space:normal;
+				text-align:left;
+				padding-left:5px;
+			}
+		}
+		td{font-size:12px;}
+		.check_box{width:18px;border-right:0px;}
+		.button_td{border-right:1px solid #999;}
+	}
+	.school_class{
+		width:100px;
+		.fl();
+		margin-left:10px;
+		margin-top:20px;
+		font-size:12px;
+		.sc_ul{height:284px;}
+		li{
+			
+			a{color:#4c4c4c;height:30px;line-height:30px;}
+			ul{margin-left:25px;list-style:initial;}
+			li{height:30px; line-height:30px;}
+		}
+		.self_info_submit{
+			.fl();
+			width:90px; height:26px;
+			line-height:26px;
+			font-size:12px;
+			margin-bottom:20px;
+		}
+	}
+/*后台管理的会员套餐页面*/
+.combo{
+	.fr();
+	width:800px;
+	height:450px;
+	position:relative;
+	h2{
+		height:55px;
+		line-height:55px;
+		font-size:18px;
+		text-align:center;
+	}
+	form{margin:0 auto;}
+	.cb_question{
+		position:absolute;
+		bottom:40px; left:5px;
+		color:#920000;
+	}
+
+}
+	.step{
+		width:645px; height:40px;
+		overflow:hidden;
+		margin:0 auto;
+	}
+		.cb_step{
+			.fl();
+			width:125px;height:18px;
+			line-height:18px;
+			border-bottom:3px solid #005f8e;
+			margin-left:36px;
+			position:relative;
+			text-align:center;
+			.step_circle{
+				width:30px;height:30px;
+				.border-radius(30px);
+				border:3px solid #005f8e;
+				position:absolute;
+				left:-36px; top:0px;
+				display:block;
+				line-height:30px;
+				background:#00aaff;
+				color:#fff;
+			}
+		}
+	.combo_form{
+		width:430px;
+		padding-top:10px;
+
+		li{height:48px;label, ul, li,a, input, .kt_ren{.fl();}}
+		.kt_ren{margin-right:30px;}
+		.kt_object{.input(198px; 22px; 1px solid #0eacfc; #999999);}
+		.kt_input{.input(108px; 22px; 1px solid #ccc; #999999; #f2f2f2);}
+
+		input[type="radio"]{
+			.input(68px; 22px; 1px solid #0eacfc; #999999);
+		}
+
+		a.pay_way{
+			display:block;
+			.input(109px; 35px; 1px solid #ff7f00; #4c4c4c);
+			background:#fff5eb;
+			padding:0px;
+			font-size:13.89px;
+			text-align:center;
+		}
+
+		b{color:#ff0000;font-size:17.97px;padding:5px;}
+
+		.current{
+			border:1px solid #ff7f00;
+		}
+
+		.current .tick{
+			display:block;
+		}
+		.tick{
+			position:absolute;
+			top:0px;right:0px;
+			background:url("@{images-path}/tick.png");
+			width:12px;height:12px;
+			text-indent:-9999px;
+			display:none;
+		}
+		a{position:relative;}
+		.self_info_submit{
+			margin-left:170px;
+			margin-top:10px;
+		}
+
+	}
+		.during_time{
+			.fl();
+			li{.fl();width:80px;padding-bottom:0px;}
+			a{
+				display:block;
+				.input(70px; 25px; 1px solid #cccccc; #999999);
+				padding:0px;
+				font-size:11.89px;
+				text-align:center;		
+			}
+		}
+		li.clause{
+			height:22px;
+			padding-bottom:0px;
+			input, span{.fl();}
+			input{
+				margin:5px 5px auto 110px;
+			}
+			span{margin-right:5px;}
+			a{color:#0055ff;text-decoration:underline;}
+		}

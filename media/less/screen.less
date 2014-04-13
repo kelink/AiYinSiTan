@@ -437,7 +437,7 @@
 
 
 /*游戏主页面*/
-.game_center{margin-top:30px; margin-bottom:51px;}
+.game_center{margin-top:30px; margin-bottom:51px;margin-left:100px;}
 aside{
 	width:182px;
 	.fl();
@@ -515,6 +515,52 @@ aside{
 	width:761px;
 	height:553px;
 	background:#000;
+
+	a:link, a:visited {
+		color: #000;
+	}
+	a:active, a:hover {
+		color: #666;
+	}
+	p.header {
+		font-size: small;
+	}
+	p.header span {
+		font-weight: bold;
+	}
+	p.footer {
+		font-size: x-small;
+	}
+	div.content {
+		margin: auto;
+		width: 960px;
+	}
+	div.broken,
+	div.missing {
+		margin: auto;
+		position: relative;
+		top: 50%;
+		width: 193px;
+	}
+	div.broken a,
+	div.missing a {
+		height: 63px;
+		position: relative;
+		top: -31px;
+	}
+	div.broken img,
+	div.missing img {
+		border-width: 0px;
+	}
+	div.broken {
+		display: none;
+	}
+	div#unityPlayer {
+		cursor: default;
+		width:761px;
+		height:553px;
+		z-index:0;
+	}
 }
 	.loading{
 		.fl();
@@ -574,7 +620,7 @@ aside{
 			
 	}
 	.choose_game{
-		width:514px;
+		width:741px;
 		margin-left:19px;
 		.fl();
 
@@ -653,22 +699,34 @@ aside{
 		
 
 .microgroove_hide{
-	display:none;
-	background:#e7f6ff url("@{images-path}/microgroove.png") no-repeat;
+	background:#fff url("@{images-path}/microgroove.png") no-repeat;
 	width:144px; height:305px;
 	position:absolute;
 	top:108px;
 	right:0px;
 }
 .microgroove_show{
+	display:none;
+	z-index:9999999999;
 	width:269px;
 	background:url("@{images-path}/microgroove_show.png") no-repeat top left;
-	padding-top:260px;
 	position:absolute;
 	top:108px;
 	right:0px;
 	.text-overflow();
 }
+	.practice_disc{
+		width:100%;
+		height:260px;
+		position:relative;
+
+		a{background:url("@{images-path}/practice_disc.png"); position:absolute; text-indent:-99999px;}
+		.start_play{width:30px; height:30px; left:136px; top:135px;background-position: 0px -42px;}
+		.pre{width:32px; height:32px; left:24px; top:85px;}
+		.love{width:40px; height:40px; left:8px; top:133px;background-position: 0px -82px;}
+		.next{width:32px; height:32px; left:24px; top:185px; background-position: 0px -132px;}
+
+	}
 	.practice_wrapper{
 		width:100%;
 		background:#e7f6ff;
@@ -688,7 +746,7 @@ aside{
 		tr:nth-child(2n){background:#fff;}
 
 		.first_td{width:20px;}
-		.sec_td{width:140px;}
+		.sec_td{width:140px;color:#4d4d4d;}
 		.third_td{width:48px;}
 		.forth_td{width:50px;}
 		span{color:red;}
@@ -697,6 +755,7 @@ aside{
 			background:url("@{images-path}/buy_car.png") no-repeat center center;
 			text-indent:-9999px;
 		}
+		.listen{background:url("@{images-path}/listen.png") no-repeat center center;}
 	}
 
 		.practice_head{
@@ -835,6 +894,44 @@ aside{
 			p{color:#fff; font-size:13.39px;text-align:center;}
 		}
 	}
+.new_main{
+	width:100%;
+	overflow:hidden;
+	ul{width:320px;.fl();}
+	.n_game{
+		.fl();
+		width:245px;
+		margin-left:37.5px;
+		padding-bottom:20px;
+		img{width:245px;}
+		a{ position:relative; display:block;}
+		a:hover .hover_game{
+			display:block;
+		}
+	}
+	.hover_game{
+		display:none;
+		width:100%; height:100%; 
+		position:absolute;top:0px; left:0px;
+		background:#000;
+		opacity:0.6;
+		filter:alpha(opacity=60);
+
+		img{
+			width:52px; height:52px;
+			position:absolute;
+			left:50%;top:50%;
+			margin-top:-26px; margin-left:-26px;
+		}
+		p{
+			color:#fff; font-size:13.39px;text-align:center;
+			width:100%;
+			position:absolute;
+			top:50%;
+			margin-top:30px;
+		}
+	}
+}
 		
 .load{
 	width:100%;

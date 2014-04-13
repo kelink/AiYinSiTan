@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>后台-学生管理</title>
+	<link rel="stylesheet/less" href="../media/less/houtai.less" />
+	<script src="../media/js/less-1.5.0.min.js"></script>
+	<script type="text/javascript" src="../media/js/jquery-1.10.1.min.js"></script>
+	<script type="text/javascript" src="../media/js/script.js"></script>
+</head>
+<body>
+	<header>
+		<div class="header">
+			<a href="#">
+				<img src="../media/images/header_logo.png">
+				<h1>爱音思弹</h1>
+			</a>
+			<span><a href="#" class="logout">退出</a></span>
+			<span><a href="#">修改密码</a></span>
+			<form>
+				<div class="search_form"><input type="text" placeholder="直接搜索查询"><input type="submit" value="搜索"></div>
+			</form>
+		</div>
+	</header>
+	<section class="main">
+		<nav>
+			<ul>
+				<li><a href="houtai_student.html"><span class="nav_student">学生管理</span></a></li>
+				<li><a href="houtai_quanxian.html" class="current"><span class="nav_message">站内信息</span></a></li>
+				<li><a href="houtai_combo.html"><span class="nav_taocan">会员套餐</span></a></li>
+			</ul>
+		</nav>
+<!-- 		<section class="school_class">
+			<ul class="sc_ul">
+				<li>
+					<a href="#">2013广外春</a>
+					<ul>
+						<li><a href="#">一班</a></li>
+						<li><a href="#">一班</a></li>
+						<li><a href="#">一班</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="#">2013广外春</a>
+					<ul>
+						<li><a href="#">一班</a></li>
+						<li><a href="#">一班</a></li>
+						<li><a href="#">一班</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="#">2013广外春</a>
+					<ul>
+						<li><a href="#">一班</a></li>
+						<li><a href="#">一班</a></li>
+						<li><a href="#">一班</a></li>
+					</ul>
+				</li>
+			</ul>
+			<button class="self_info_submit">删除组</button>
+			<button class="self_info_submit">添加组</button>
+		</section> -->
+		<section class="manager">
+			<table class="houtai_table">
+				<tr>
+					
+					<th><span class="ht_span">真实姓名</span></th>
+					<th><span class="ht_span">手机号码</span></th>
+					<th><span class="ht_beizhu">备注</span></th>
+					<th class="button_td">申请成为会员</th>
+				</tr>
+				<tr>
+					<td><span class="ht_span">梁大大</span></td>
+					<td><span class="ht_span">12345678901</span></td>
+					<td><span class="ht_beizhu">我是梁大大</span></td>
+					<td class="button_td"><button class="apply_not">接受</button><button class="apply_not">拒绝</button></td>
+				</tr>
+				<tr>
+					<td><span class="ht_span">梁大大</span></td>
+					<td><span class="ht_span">12345678901</span></td>
+					<td><span class="ht_beizhu">我是梁大大</span></td>
+					<td class="button_td"><button class="apply_not">接受</button><button class="apply_not">拒绝</button></td>
+				</tr>
+				<tr>
+					<td><span class="ht_span">梁大大</span></td>
+					<td><span class="ht_span">12345678901</span></td>
+					<td><span class="ht_beizhu">我是梁大大</span></td>
+					<td class="button_td"><button class="apply_not">接受</button><button class="apply_not">拒绝</button></td>
+				</tr>
+				<tr>
+					<td><span class="ht_span">梁大大</span></td>
+					<td><span class="ht_span">12345678901</span></td>
+					<td><span class="ht_beizhu">我是梁大大</span></td>
+					<td class="button_td"><button class="apply_not">接受</button><button class="apply_not">拒绝</button></td>
+				</tr>
+				<tr>
+					<td><span class="ht_span">梁大大</span></td>
+					<td><span class="ht_span">12345678901</span></td>
+					<td><span class="ht_beizhu">我是梁大大</span></td>
+					<td class="button_td"><button class="apply_not">接受</button><button class="apply_not">拒绝</button></td>
+				</tr>
+				<tr>
+					<td><span class="ht_span">梁大大</span></td>
+					<td><span class="ht_span">12345678901</span></td>
+					<td><span class="ht_beizhu">我是梁大大</span></td>
+					<td class="button_td"><button class="apply_not">接受</button><button class="apply_not">拒绝</button></td>
+				</tr>
+				<tr>
+					<td><span class="ht_span">梁大大</span></td>
+					<td><span class="ht_span">12345678901</span></td>
+					<td><span class="ht_beizhu">我是梁大大</span></td>
+					<td class="button_td"><button class="apply_not">接受</button><button class="apply_not">拒绝</button></td>
+				</tr>
+				<tr>
+					<td><span class="ht_span">梁大大</span></td>
+					<td><span class="ht_span">12345678901</span></td>
+					<td><span class="ht_beizhu">我是梁大大</span></td>
+					<td class="button_td"><button class="apply_not">接受</button><button class="apply_not">拒绝</button></td>
+				</tr>
+				<tr>
+					<td><span class="ht_span">梁大大</span></td>
+					<td><span class="ht_span">12345678901</span></td>
+					<td><span class="ht_beizhu">我是梁大大</span></td>
+					<td class="button_td"><button class="apply_not">接受</button><button class="apply_not">拒绝</button></td>
+				</tr>
+				<tr>
+					<td><span class="ht_span">梁大大</span></td>
+					<td><span class="ht_span">12345678901</span></td>
+					<td><span class="ht_beizhu">我是梁大大</span></td>
+					<td class="button_td"><button class="apply_not">接受</button><button class="apply_not">拒绝</button></td>
+				</tr>
+				
+				<!-- <tr>
+					<td class="table_bottom" colspan="7">
+						<ul>
+							<li><input type="checkbox"><span>全选</span></li>
+							<li><input type="checkbox"><span>反选</span></li>
+							<li><a href="#" class="delete">删除已选</a></li>
+							<!-- <li class="select">
+								<span>移动到</span>
+								<select>
+									<option></option>
+									<option>2013广外春</option>
+									<option>2013中大春</option>
+								</select>
+							</li> 
+						</ul>
+					</td>
+				</tr> -->
+			</table>
+			<div class="jump_to">
+				<form>
+					<span>转到</span><input type="text"><span>页</span><input type="submit" value="提交">
+				</form>
+				<ul>
+					<li class="sum">共5页</li>
+					<li><a href="#" class="before">上一页</a></li>
+					<li><span><a href="#">1</a></span></li>
+					<li><span><a href="#">2</a></span></li>
+					<li><span class="current"><a href="#">3</a></span></li>
+					<li><span><a href="#">4</a></span></li>
+					<li><span><a href="#">5</a></span></li>
+					<li><a href="#" class="after">下一页</a></li>
+				</ul>
+			</div>
+		</section>
+	</section>
+	<footer>
+		<div class="footer">
+			<img src="../media/images/footer_logo.png">
+			<h1>爱音思弹</h1>
+			<h2>Copyright © aiyinsitan 2013</h2>
+			<ul>
+				<li><a href="#">联系我们</a></li>
+				<li><a href="#">隐私条款</a></li>
+				<li><a href="#">关于爱音思弹公司</a></li>
+			</ul>
+		</div>
+	</footer>
+	<script type="text/javascript">
+	bindUl();
+	</script>
+</body>
+</html>

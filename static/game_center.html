@@ -8,6 +8,15 @@
 	<script src="../media/js/less-1.5.0.min.js"></script>
 	<script type="text/javascript" src="../media/js/jquery-1.10.1.min.js"></script>
 	<script type="text/javascript" src="../media/js/script.js"></script>
+	<script type="text/javascript">
+	<!--
+	var unityObjectUrl = "http://webplayer.unity3d.com/download_webplayer-3.x/3.0/uo/UnityObject2.js";
+	if (document.location.protocol == 'https:')
+		unityObjectUrl = unityObjectUrl.replace("http://", "https://ssl-");
+	document.write('<script type="text\/javascript" src="' + unityObjectUrl + '"><\/script>');
+	-->
+	</script>
+	<script type="text/javascript" src="../media/js/game.js"></script>
 </head>
 <body>
 	<header>
@@ -46,10 +55,22 @@
 			
 		</aside>
 		<section class="game">
-			<div class="loading">
+			<div id="unityPlayer">
+				<div class="missing">
+					<a href="http://unity3d.com/webplayer/" title="Unity Web Player. Install now!">
+						<img alt="Unity Web Player. Install now!" src="http://webplayer.unity3d.com/installation/getunity.png" width="193" height="63" />
+					</a>
+				</div>
+				<div class="broken">
+					<a href="http://unity3d.com/webplayer/" title="Unity Web Player. Install now! Restart your browser after install.">
+						<img alt="Unity Web Player. Install now! Restart your browser after install." src="http://webplayer.unity3d.com/installation/getunityrestart.png" width="193" height="63" />
+					</a>
+				</div>
+			</div>
+			<!-- <div class="loading">
 				<h2>正在为您加载游戏.....</h2>
 				<p>右键可以全屏</p>
-			</div>
+			</div> -->
 		</section>
 		<section class="choose">
 			<div class="rank_list">
@@ -79,6 +100,7 @@
 					<li>
 						<div>
 							<img src="../media/images/fish.png">
+							<input type="hidden" class="game_name" value="unity3dLWL.unity3d">
 							<a href="#">
 								<h3>简单的游戏名字</h3><p>点击开始玩</p>
 							</a>
@@ -87,23 +109,34 @@
 					<li>
 						<div>
 							<img src="../media/images/fish.png">
+							<input type="hidden" class="game_name" value="unity3dLWL.unity3d">
 							<a href="#">
 								<h3>简单的游戏名字</h3><p>点击开始玩</p>
 							</a>
 						</div>
 					</li>
-					<li class="right_li">
+					<li>
 						<div>
 							<img src="../media/images/fish.png">
+							<input type="hidden" class="game_name" value="unity3dLWL.unity3d">
+							<a href="#">
+								<h3>简单的游戏名字</h3><p>点击开始玩</p>
+							</a>
+						</div>
+					</li>
+					<li>
+						<div>
+							<img src="../media/images/fish.png">
+							<input type="hidden" class="game_name" value="unity3dLWL.unity3d">
 							<a href="#">
 								<h3>简单的游戏名字</h3><p>点击开始玩</p>
 							</a>
 						</div>
 					</li>
 				</ul>
-				<button class="self_info_submit">游戏自带歌曲</button>
+				<!-- <button class="self_info_submit">游戏自带歌曲</button> -->
 			</div>
-			<div class="choose_song">
+<!-- 			<div class="choose_song">
 				<h2>载入喜欢的歌曲</h2>
 				<table>
 					<tr>
@@ -136,117 +169,141 @@
 					</tr>
 				</table>
 				<button class="self_info_submit">练我喜欢的歌曲</button>
-			</div>
+			</div> -->
 		</section>
 	</section>
 	<section class="microgroove_hide">
 	</section>
 	<section class="microgroove_show">
+		<div class="practice_disc">
+			<a href="#" class="start_play">播放</a>
+			<a href="#" class="pre">上一首</a>
+			<a href="#" class="love">喜欢</a>
+			<a href="#" class="next">下一首</a>
+		</div>
 		<div class="practice_wrapper">
+			
 			<div class="practice_song">
 				<div class="practice_head">
-					<h2>选择练习曲目</h2>
-					<div class="search_form">
+					<h2>当前播放歌曲：</h2>
+					<span class="song_name">歌曲名字</span>
+					<!-- <div class="search_form">
 						<form>
 						<input type="text">
 						<input type="submit" value="搜索">
 						</form>
-					</div>
+					</div> -->
 				</div>
 				<table>
 				<tr>
-					<th class="first_td"></th><th class="sec_td">单曲名</th><th class="third_td">售价</th><th class="forth_td">购买练习</th>
+					<th><span class="sec_td">单曲名</span></th><th class="forth_td">试听</th><th class="third_td">售价</th><th class="forth_td">购买练习</th>
 				</tr>
 				<tr>
-					<td><input type="checkbox"></td>
-					<td>我们所好的(张靓颖)</td>
+					<input type="hidden" class="song_name" value="">
+					<td><span class="sec_td">我们所好的(张靓颖)</span></td>
+					<td><a href="#" class="listen">试听</a></td>
 					<td><span>&#65509;0.99</span></td>
 					<td><a href="#">购买</a></td>
 				</tr>
 				<tr>
-					<td><input type="checkbox"></td>
-					<td>我们所好的(张靓颖)</td>
+					<input type="hidden" class="song_name" value="">
+					<td><span class="sec_td">我们所好的(张靓颖)</span></td>
+					<td><a href="#" class="listen">试听</a></td>
 					<td><span>&#65509;0.99</span></td>
 					<td><a href="#">购买</a></td>
 				</tr>
 				<tr>
-					<td><input type="checkbox"></td>
-					<td>我们所好的(张靓颖)</td>
+					<input type="hidden" class="song_name" value="">
+					<td><span class="sec_td">我们所好的(张靓颖)</span></td>
+					<td><a href="#" class="listen">试听</a></td>
 					<td><span>&#65509;0.99</span></td>
 					<td><a href="#">购买</a></td>
 				</tr>
 				<tr>
-					<td><input type="checkbox"></td>
-					<td>我们所好的(张靓颖)</td>
+					<input type="hidden" class="song_name" value="">
+					<td><span class="sec_td">我们所好的(张靓颖)</span></td>
+					<td><a href="#" class="listen">试听</a></td>
 					<td><span>&#65509;0.99</span></td>
 					<td><a href="#">购买</a></td>
 				</tr>
 				<tr>
-					<td><input type="checkbox"></td>
-					<td>我们所好的(张靓颖)</td>
+					<input type="hidden" class="song_name" value="">
+					<td><span class="sec_td">我们所好的(张靓颖)</span></td>
+					<td><a href="#" class="listen">试听</a></td>
 					<td><span>&#65509;0.99</span></td>
 					<td><a href="#">购买</a></td>
 				</tr>
 				<tr>
-					<td><input type="checkbox"></td>
-					<td>我们所好的(张靓颖)</td>
+					<input type="hidden" class="song_name" value="">
+					<td><span class="sec_td">我们所好的(张靓颖)</span></td>
+					<td><a href="#" class="listen">试听</a></td>
 					<td><span>&#65509;0.99</span></td>
 					<td><a href="#">购买</a></td>
 				</tr>
 				<tr>
-					<td><input type="checkbox"></td>
-					<td>我们所好的(张靓颖)</td>
+					<input type="hidden" class="song_name" value="">
+					<td><span class="sec_td">我们所好的(张靓颖)</span></td>
+					<td><a href="#" class="listen">试听</a></td>
 					<td><span>&#65509;0.99</span></td>
 					<td><a href="#">购买</a></td>
 				</tr>
 				<tr>
-					<td><input type="checkbox"></td>
-					<td>我们所好的(张靓颖)</td>
+					<input type="hidden" class="song_name" value="">
+					<td><span class="sec_td">我们所好的(张靓颖)</span></td>
+					<td><a href="#" class="listen">试听</a></td>
 					<td><span>&#65509;0.99</span></td>
 					<td><a href="#">购买</a></td>
 				</tr>
 				<tr>
-					<td><input type="checkbox"></td>
-					<td>我们所好的(张靓颖)</td>
+					<input type="hidden" class="song_name" value="">
+					<td><span class="sec_td">我们所好的(张靓颖)</span></td>
+					<td><a href="#" class="listen">试听</a></td>
 					<td><span>&#65509;0.99</span></td>
 					<td><a href="#">购买</a></td>
 				</tr>
 				<tr>
-					<td><input type="checkbox"></td>
-					<td>我们所好的(张靓颖)</td>
+					<input type="hidden" class="song_name" value="">
+					<td><span class="sec_td">我们所好的(张靓颖)</span></td>
+					<td><a href="#" class="listen">试听</a></td>
 					<td><span>&#65509;0.99</span></td>
 					<td><a href="#">购买</a></td>
 				</tr>
 				<tr>
-					<td><input type="checkbox"></td>
-					<td>我们所好的(张靓颖)</td>
+					<input type="hidden" class="song_name" value="">
+					<td><span class="sec_td">我们所好的(张靓颖)</span></td>
+					<td><a href="#" class="listen">试听</a></td>
 					<td><span>&#65509;0.99</span></td>
 					<td><a href="#">购买</a></td>
 				</tr>
 				<tr>
-					<td><input type="checkbox"></td>
-					<td>我们所好的(张靓颖)</td>
+					<input type="hidden" class="song_name" value="">
+					<td><span class="sec_td">我们所好的(张靓颖)</span></td>
+					<td><a href="#" class="listen">试听</a></td>
 					<td><span>&#65509;0.99</span></td>
 					<td><a href="#">购买</a></td>
 				</tr>
 				<tr>
-					<td><input type="checkbox"></td>
-					<td>我们所好的(张靓颖)</td>
+					<input type="hidden" class="song_name" value="">
+					<td><span class="sec_td">我们所好的(张靓颖)</span></td>
+					<td><a href="#" class="listen">试听</a></td>
 					<td><span>&#65509;0.99</span></td>
 					<td><a href="#">购买</a></td>
 				</tr>
 				<tr>
-					<td><input type="checkbox"></td>
-					<td>我们所好的(张靓颖)</td>
+					<input type="hidden" class="song_name" value="">
+					<td><span class="sec_td">我们所好的(张靓颖)</span></td>
+					<td><a href="#" class="listen">试听</a></td>
 					<td><span>&#65509;0.99</span></td>
 					<td><a href="#">购买</a></td>
 				</tr>
 				<tr>
-					<td><input type="checkbox"></td>
-					<td>我们所好的(张靓颖)</td>
+					<input type="hidden" class="song_name" value="">
+					<td><span class="sec_td">我们所好的(张靓颖)</span></td>
+					<td><a href="#" class="listen">试听</a></td>
 					<td><span>&#65509;0.99</span></td>
 					<td><a href="#">购买</a></td>
 				</tr>
+				
 			</table>
 			</div>
 		</div>
@@ -263,5 +320,57 @@
 			</ul>
 		</div>
 	</footer>
+	<script type="text/javascript">
+	displayAndHide(".microgroove_hide", ".microgroove_show");
+	$(".practice_disc .start_play").click(function(){
+		var url = "addli.php", data = "";
+		var _this = $(this);
+		function callback(){
+			if(!_this.hasClass("end_play")){
+				_this.css({backgroundPosition:"0px -170px"});
+				_this.addClass("end_play");
+			}else{
+				_this.css({backgroundPosition:"0px -42px"});
+				_this.removeClass("end_play");
+			}
+		}
+		ajaxfn(url, data, callback);
+		return false;
+	});
+	$(".practice_disc .pre").click(function(){
+		var url = "addli.php", data = "";
+		var _this = $(this);
+		ajaxfn(url, data);
+		return false;
+	});
+	$(".practice_disc .next").click(function(){
+		var url = "addli.php", data = "";
+		var _this = $(this);
+		ajaxfn(url, data);
+		return false;
+	});
+	$(".practice_disc .love").click(function(){
+		var url = "addli.php", data = "";
+		var _this = $(this);
+		ajaxfn(url, data);
+		return false;
+	});
+	$(".listen").click(function(){
+		var url = 'addli.php';
+		var data = $(this).parent().siblings(".song_name").val();
+		function callback(backdata){
+			var backdata = backdata['data'];
+			$(".practice_head .song_name").html(backdata['song_name']);
+		}
+		ajaxfn(url, data, callback);
+		return false;
+	});
+	$(".choose_game a").click(function(){
+		var gameName = $(this).siblings(".game_name").val();
+		game(gameName);
+		return false;
+	})
+	game("unity3dLWL.unity3d");
+	</script>
 </body>
 </html>

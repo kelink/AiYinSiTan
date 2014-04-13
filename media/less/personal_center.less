@@ -149,17 +149,29 @@
 		overflow:hidden;
 		position:relative;
 
-		ul{
+		.ul_friendlist{
 			.fl();
-			padding-top:8px;
 			position:absolute;
 			left:0px; top:0px;
+			width:100%;
+
+			ul{ width:100%; .fl(); display:none;}
 			
-			li{
+			.suoqi{background:url("@{images-path}/suoqi.png") no-repeat left center; padding-left:18px; height:33px; line-height:33px;margin-left:5px;cursor:pointer;}
+			.zhankai{background:url("@{images-path}/zhankai.png") no-repeat left center;}
+			.add_submit, .delete_submit{width:14px; height:14px; float:right;display:block;margin-top:10px;}
+			.add_submit{background:url("@{images-path}/add_btn.png") no-repeat left center;}
+			.delete_submit{background:url("@{images-path}/delete_btn.png") no-repeat left center;display:none;}
+
+			.add_li{display:none;}
+
+			li{width:100%;overflow:hidden;}
+			.ul_friend{
 				height:33px;
 				line-height:33px;
 				padding-left:4px;
 				a{display:block;}
+
 
 				&:hover{
 					background:#ebf8ff;
@@ -184,11 +196,20 @@
 	}
 
 	.my_friend_list .pc_list{
-		height:406px;
+		height:373px;
 
 		ul{
 			width:211px;
 		}
+
+	}
+	.my_friend_list .friend_option{
+		height:33px;
+
+		a{margin-left:20px; height:33px; line-height:33px;padding-left:25px; color:#4c4c4c; font-size:12px;}
+		.add_btn{background:url("@{images-path}/add_btn.png") no-repeat left center;}
+		.delete_btn{background:url("@{images-path}/delete_btn.png") no-repeat left center;}
+
 	}
 	.recommend_list .pc_list, .rank_list .pc_list{
 		height:181px;
@@ -306,8 +327,14 @@
 /*音乐推荐*/
 .pc_record{
 	width:730px; height:195px;
-	margin:25px auto;
+	margin:25px auto 0px;
 	position:relative;
+}
+.pc_title{
+	width:100%;height:20px;
+	color:#999;
+	margin:0 auto 25px;
+	text-align:center;
 }
 	.big_disc{
 		width:190px; height:190px;
@@ -315,6 +342,27 @@
 		background:url("@{images-path}/disc.png");
 		left:50%;
 		margin-left:-95px;
+		
+	}
+	.start_big_disc{
+		-webkit-transition:all 2s ease-in-out;
+	    -moz-transition:all 2s ease-in-out;
+	    -o-transition:all 2s ease-in-out;
+	    -ms-transition:all 2s ease-in-out;    
+	    transition:all 2s ease-in-out;
+	    -webkit-animation: rotate 9.5s infinite linear;
+	    -moz-animation: rotate 9.5s infinite linear;
+	    -moz-animation: rotate 9.5s infinite linear;
+		-ms-animation: rotate 9.5s infinite linear;
+		-o-animation: rotate 9.5s infinite linear;
+		animation: rotate 9.5s infinite linear;
+	}
+	.end_big_disc{
+		-webkit-animation-play-state: paused;
+		-moz-animation-play-state: paused;
+		-ms-animation-play-state: paused;
+		-o-animation-play-state: paused;
+		animation-play-state: paused;
 	}
 		.starBtn_bg{
 			width:53px;height:53px;
@@ -328,7 +376,8 @@
 				position:absolute;
 				left:50%; top:50%;
 				margin-left:-15.5px; margin-top:-15.5px;
-				background:url("@{images-path}/disc.png") 0px -304px;
+				background:url("@{images-path}/disc.png") 0px -263px;
+				z-index:1;
 			}
 	.operate_contain{
 		width:613px; height:52px;
@@ -356,7 +405,7 @@
 			}
 			.replay{
 				.fr();
-				margin-right:48px;
+				/*margin-right:48px;*/
 				a{background-position: 0px -170px;}
 			}
 			.next{
@@ -373,6 +422,7 @@
 
 	.music{
 		.fl();
+		height:224px;
 		.border-radius();
 		background:#fff;
 		padding:0px 15px 20px;
@@ -543,3 +593,10 @@
 			margin:0px auto auto 132px;
 		}
 	}
+
+
+@-webkit-keyframes rotate{from{-webkit-transform:rotate(0deg)}to{-webkit-transform:rotate(360deg)}}
+@-moz-keyframes rotate{from{-moz-transform:rotate(0deg)}to{-moz-transform:rotate(360deg)}}
+@-ms-keyframes rotate{from{-ms-transform:rotate(0deg)}to{-ms-transform:rotate(360deg)}}
+@-o-keyframes rotate{from{-o-transform:rotate(0deg)}to{-o-transform:rotate(360deg)}}
+@keyframes rotate{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}

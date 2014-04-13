@@ -1,4 +1,1517 @@
-body{
-	text-indent: ;
-	text-decoration:underline;
+/*!
+ * Preboot v2
+ *
+ * Open sourced under MIT license by @mdo.
+ * Some variables and mixins from Bootstrap (Apache 2 license).
+ */
+/*image path*/
+/*global width*/
+/*basic background color*/
+/*fonts style*/
+/*fonts color*/
+/*fonts weight*/
+/*border radius*/
+/*float*/
+/*text overflow*/
+/*button class*/
+/*input text class*/
+body,
+html {
+  background: #ffffff;
+  font-size: 14px;
+  font-family: "微软雅黑";
+  color: #4d4d4d;
+}
+/*header start*/
+header {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 100%;
+  height: 80px;
+  background: #333333;
+}
+.header,
+.footer {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 960px;
+  height: 72px;
+}
+.header {
+  margin-top: 8px;
+}
+.header a {
+  float: left;
+  display: inline;
+  margin-left: 10px;
+}
+.header img {
+  float: left;
+  display: inline;
+}
+.header h1 {
+  float: left;
+  display: inline;
+  line-height: 63px;
+  color: #fff;
+  font-size: 24px;
+  margin-left: 14px;
+}
+.header .personal_or_game {
+  float: right;
+  display: inline;
+  color: #f0f0f0;
+  margin-right: 5px;
+  margin-top: 37px;
+}
+.wrapper {
+  width: 100%;
+  height: auto;
+  background: #f3f3f3;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.main {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 960px;
+  min-height: 300px;
+}
+footer {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 100%;
+  height: 68px;
+  background: #333333;
+}
+.footer {
+  margin-top: 15px;
+}
+.footer img {
+  float: left;
+  display: inline;
+  margin-left: 10px;
+}
+.footer h1,
+.footer h2 {
+  float: left;
+  display: inline;
+  line-height: 41px;
+  color: #a39c9c;
+}
+.footer h1 {
+  margin-left: 6px;
+  font-size: 16px;
+}
+.footer h2 {
+  font-size: 14px;
+  margin-left: 32px;
+}
+.footer ul {
+  float: right;
+  display: inline;
+  margin-right: 8px;
+}
+.footer ul li {
+  float: right;
+  display: inline;
+  margin-left: 34px;
+}
+.footer ul li a {
+  display: block;
+  line-height: 41px;
+  color: #a39c9c;
+}
+/*一些挂件*/
+/*注册完善页的input[text]样式*/
+/*.self_info_text{
+	.input(153px, 28px, 1px solid #cccccc, #bfbfbf, #f3f3f3);
+}*/
+/*注册完善页的按钮*/
+.self_info_sbtn {
+  width: 44px;
+  height: 25px;
+  color: #fff;
+  background: #cccccc;
+}
+.self_info_submit {
+  background: url("../images/self_info_btnbg.png") repeat-x;
+  width: 140px;
+  height: 40px;
+  line-height: 40px;
+  color: #f3f3f3;
+  font-size: 16px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+/*登陆页面的按钮*/
+.login_submit {
+  background: url("../images/regisit_btnbg.png") repeat-x;
+  width: 140px;
+  height: 40px;
+  line-height: 40px;
+  color: #f3f3f3;
+  font-size: 16px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+.verification_btn {
+  background: url("../images/verification_code.png") repeat-x;
+  width: 101px;
+  height: 25px;
+  line-height: 25px;
+  color: #f3f3f3;
+  font-size: 10.89px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+/*the usual reset style*/
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+button,
+textarea,
+p,
+blockquote,
+th,
+td {
+  margin: 0;
+  padding: 0;
+}
+fieldset,
+img {
+  border: 0;
+}
+img,
+button {
+  border: 0;
+}
+button {
+  cursor: pointer;
+}
+abbr,
+acronym {
+  border: 0;
+  font-variant: normal;
+}
+/*字体样式*/
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+strong,
+th,
+var,
+optgroup {
+  font-style: inherit;
+  font-weight: inherit;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+abbr,
+acronym {
+  border: 0;
+  font-variant: normal;
+}
+input,
+button,
+textarea,
+select,
+optgroup,
+option {
+  font-family: inherit;
+  font-size: inherit;
+  font-style: inherit;
+  font-weight: inherit;
+}
+input,
+button,
+textarea,
+select {
+  *font-size: 100%;
+}
+ol,
+ul {
+  list-style: none;
+}
+table {
+  border-collapse: collapse;
+}
+caption,
+th {
+  text-align: left;
+}
+sup,
+sub {
+  font-size: 100%;
+  vertical-align: baseline;
+}
+ins {
+  text-decoration: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+a {
+  text-decoration: none;
+}
+:link,
+:visited {
+  text-decoration: none;
+}
+.self_info h1 {
+  margin-top: 40px;
+  font-size: 18px;
+}
+.self_info h1 a {
+  float: right;
+  display: inline;
+  color: #b2b2b2;
+  font-size: 14px;
+}
+.self_info nav {
+  width: 130px;
+  float: left;
+  display: inline;
+}
+.self_info nav li {
+  margin-top: 20px;
+  width: 93px;
+  height: 35px;
+  position: relative;
+}
+.self_info nav li a {
+  display: block;
+  line-height: 35px;
+  background: #c5e8ff;
+  text-align: center;
+  color: #fff;
+}
+.self_info nav li a span {
+  display: none;
+}
+.self_info nav li a.current {
+  background: #0099ff;
+}
+.self_info nav li a.current span {
+  display: block;
+  width: 7px;
+  height: 10px;
+  background: url("../images/triangle.png");
+  position: absolute;
+  left: 93px;
+  top: 12.5px;
+}
+.necessary,
+.optional {
+  float: left;
+  display: inline;
+  margin-top: 20px;
+  margin-left: 147px;
+  margin-bottom: 40px;
+  width: 470px;
+  min-height: 373px;
+}
+.necessary img,
+.necessary ol,
+.necessary li,
+.necessary label,
+.necessary input,
+.necessary button,
+.necessary p {
+  float: left;
+  display: inline;
+}
+.necessary ol {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin-left: 22px;
+  width: 380px;
+}
+.necessary ol li {
+  width: 100%;
+  margin-bottom: 14px;
+}
+.necessary ol li label {
+  width: 100%;
+  font-size: 14px;
+  color: #808080;
+  margin-bottom: 17px;
+}
+.necessary ol li input,
+.necessary ol li button {
+  margin-bottom: 18px;
+  margin-right: 12px;
+}
+.necessary ol li input {
+  width: 153px;
+  height: 28px;
+  line-height: 28px;
+  border: 1px solid #cccccc;
+  color: #bfbfbf;
+  padding-left: 5px;
+  background: #f3f3f3;
+}
+.necessary ol li button {
+  margin-top: 4px;
+}
+.necessary ol li p {
+  width: 100%;
+}
+.necessary ol li a {
+  color: #0055ff;
+  text-decoration: underline;
+}
+.necessary ol li .donot_fill,
+.necessary ol li .must_fill,
+.necessary ol li a {
+  line-height: 25px;
+  font-size: 14px;
+}
+.necessary ol li .donot_fill {
+  color: #b2b2b2;
+}
+.necessary ol li .must_fill {
+  color: #ff0000;
+}
+.necessary ol li .email {
+  width: 320px;
+}
+.necessary ol li .verification_code {
+  width: 195px;
+}
+.necessary ol li .verification_btn {
+  background: url("../images/verification_code.png") repeat-x;
+  width: 110px;
+  height: 28px;
+  line-height: 28px;
+  color: #f3f3f3;
+  font-size: 10.89px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+.necessary .self_info_submit {
+  margin: 20px auto auto 132px;
+}
+.optional {
+  display: none;
+  font-size: 14px;
+  color: #808080;
+}
+.optional table,
+.optional button,
+.optional label,
+.optional input,
+.optional span,
+.optional p {
+  float: left;
+  display: inline;
+}
+.optional input {
+  margin-right: 5px;
+  margin-top: 5px;
+}
+.optional table {
+  width: 100%;
+}
+.optional table tr {
+  padding-bottom: 35px;
+  vertical-align: top;
+}
+.optional table td {
+  width: 116px;
+}
+.optional table td:first-child {
+  width: 92px;
+  line-height: 25px;
+}
+.optional table .tr1 {
+  height: 56px;
+}
+.optional table .tr {
+  height: 25px;
+}
+.optional table .tr3 {
+  height: 67px;
+}
+.optional table .tr4 {
+  height: 32px;
+}
+.optional table label {
+  margin-right: 10px;
+  color: #4c4c4c;
+}
+.optional .music_company,
+.optional .love_singer,
+.optional .love_song,
+.optional .hobby_band,
+.optional .music_dream,
+.optional .say_something {
+  border-bottom: 1px solid #acacac;
+  margin-right: 0px;
+  height: 26px;
+}
+.optional .music_company {
+  width: 65px;
+}
+.optional .love_singer {
+  width: 88px;
+}
+.optional .love_song {
+  width: 135px;
+}
+.optional .hobby_band,
+.optional .music_dream {
+  width: 330px;
+}
+.optional .say_something {
+  width: 100%;
+}
+.optional p {
+  margin: 40px auto 18px 149px;
+}
+.optional .self_info_submit {
+  margin: 0px auto auto 132px;
+}
+.about_popup {
+  display: none;
+  position: absolute;
+  width: 458px;
+  top: 130px;
+  left: 400px;
+  padding: 50px 55px;
+  line-height: 33px;
+  font-size: 14px;
+  border: 1px solid #d8d8d8;
+  background: #ffffff;
+  box-shadow: 0 5px 20px #d8d8d8;
+}
+.about_popup b {
+  font-weight: normal;
+  color: #0055ff;
+}
+.about_popup span {
+  text-indent: -999px;
+  background: url("../images/close_cross.png") no-repeat;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 16px;
+  height: 18px;
+}
+/*登陆页面*/
+.login {
+  margin-top: 40px;
+  margin-bottom: 90px;
+  position: relative;
+}
+.playing_guitar {
+  float: left;
+  display: inline;
+  background: url("../images/playing_guitar.png") no-repeat;
+  width: 620px;
+  height: 390px;
+}
+.regist_form,
+.login_form {
+  float: right;
+  display: inline;
+  width: 336px;
+  height: 390px;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+}
+.regist_form h1,
+.login_form h1,
+.regist_form h2,
+.login_form h2,
+.regist_form input,
+.login_form input,
+.regist_form button,
+.login_form button,
+.regist_form span,
+.login_form span {
+  float: left;
+  display: inline;
+}
+.regist_form a,
+.login_form a {
+  float: right;
+  display: inline;
+  margin-right: 20px;
+  font-size: 14px;
+  color: #b2b2b2;
+}
+.regist_form h1,
+.login_form h1 {
+  font-size: 18px;
+  color: #4c4c4c;
+  margin-bottom: 36px;
+}
+.regist_form input[type="text"],
+.login_form input[type="text"],
+.regist_form input[type="password"],
+.login_form input[type="password"] {
+  width: 315px;
+  height: 38px;
+  line-height: 38px;
+  border: 1px solid #cccccc;
+  color: #999999;
+  padding-left: 5px;
+  background: #ffffff;
+}
+.regist_form input[type="checkbox"],
+.login_form input[type="checkbox"] {
+  margin-right: 5px;
+  margin-top: 5px;
+}
+.regist_form span,
+.login_form span {
+  font-size: 14px;
+  color: #4c4c4c;
+}
+.regist_form input.error,
+.login_form input.error {
+  border: 1px solid #ff0000;
+  color: #ff0000;
+}
+.regist_form .verification_btn {
+  margin-left: 15px;
+  margin-top: 5px;
+}
+.regist_form .login_submit {
+  margin-left: 90px;
+  margin-top: 75px;
+}
+.regist_form input[type="text"],
+.regist_form input[type="password"] {
+  margin-bottom: 12px;
+}
+.regist_form input.verification_code {
+  width: 192px;
+}
+.regist_form span {
+  margin-bottom: 35px;
+  width: 100%;
+  color: #0099ff;
+  text-align: left;
+}
+.regist_form .self_info_submit {
+  margin-left: 90px;
+  margin-top: 75px;
+}
+.login_form {
+  display: none;
+}
+.login_form .forget_pass {
+  float: right;
+  display: inline;
+  margin-right: 20px;
+  color: #0055ff;
+}
+.login_form input[type="text"],
+.login_form input[type="password"] {
+  margin-bottom: 20px;
+}
+.login_form .self_info_submit {
+  margin-left: 90px;
+  margin-top: 40px;
+}
+.login_form h2 {
+  margin-bottom: 0px;
+}
+.login_form .another_login {
+  float: left;
+  display: inline;
+  width: 100%;
+  height: 35px;
+  line-height: 35px;
+  margin-top: 45px;
+  font-size: 14px;
+  color: #333333;
+}
+/*跳转页面*/
+.skip {
+  margin: 108px auto 173px;
+  width: 328px;
+  height: auto;
+  line-height: auto;
+  border: 1px solid #cccccc;
+  color: #666666;
+  padding-left: 5px;
+  background: #ffffff;
+  padding: 55px 100px 50px 108px;
+  font-size: 13.94px;
+  line-height: 25px;
+}
+.skip h2 {
+  font-size: 23.89px;
+  color: #ff9b27;
+  line-height: 50px;
+}
+.skip a {
+  color: #002cd1;
+  text-decoration: underline;
+}
+.skip span {
+  color: #ff9b27;
+}
+/*支付页面*/
+.pay_form {
+  width: 580px;
+  min-height: 435px;
+  border: 1px solid #cccccc;
+  margin: 40px auto 53px;
+  overflow: hidden;
+}
+.pay_form h2 {
+  width: 100%;
+  height: 60px;
+  line-height: 60px;
+  font-size: 18px;
+  color: #0095ff;
+  text-align: center;
+}
+.pay_form ol {
+  width: 475px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+}
+.pay_form li {
+  float: left;
+  display: inline;
+  padding-bottom: 23px;
+  width: 100%;
+}
+.pay_form li label,
+.pay_form li ul,
+.pay_form li li,
+.pay_form li a {
+  float: left;
+  display: inline;
+}
+.pay_form a.pay_way {
+  display: block;
+  width: 109px;
+  height: 35px;
+  line-height: 35px;
+  border: 1px solid #ff7f00;
+  color: #4c4c4c;
+  padding-left: 5px;
+  background: #ffffff;
+  background: #fff5eb;
+  padding: 0px;
+  font-size: 13.89px;
+  text-align: center;
+}
+.pay_form b {
+  color: #ff0000;
+  font-size: 17.97px;
+  padding: 5px;
+}
+.pay_form .current {
+  border: 1px solid #ff7f00;
+}
+.pay_form .current .tick {
+  display: block;
+}
+.pay_form .tick {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  background: url("../images/tick.png");
+  width: 12px;
+  height: 12px;
+  text-indent: -9999px;
+  display: none;
+}
+.pay_form a {
+  position: relative;
+}
+.pay_email {
+  width: 200px;
+  height: 23px;
+  line-height: 23px;
+  border: 1px solid #cccccc;
+  color: #999999;
+  padding-left: 5px;
+  background: #ffffff;
+}
+.combo li {
+  width: 110px;
+  padding-bottom: 0px;
+}
+.combo a {
+  display: block;
+  width: 90px;
+  height: 25px;
+  line-height: 25px;
+  border: 1px solid #cccccc;
+  color: #999999;
+  padding-left: 5px;
+  background: #ffffff;
+  padding: 0px;
+  font-size: 11.89px;
+  text-align: center;
+}
+.combo .moom,
+.combo .sun {
+  float: left;
+  display: inline;
+  width: 84px;
+  height: 33px;
+  background: #00aaff;
+  color: #fff;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  position: relative;
+  margin-top: 12px;
+  margin-left: 4px;
+  line-height: 33px;
+  font-size: 12px;
+  text-align: center;
+}
+.combo .moom span,
+.combo .sun span {
+  background: url("../images/combo_intro.png");
+  position: absolute;
+  width: 7px;
+  height: 3px;
+  top: -3px;
+  left: 40px;
+}
+.combo .sun {
+  font-size: 10.98px;
+  line-height: 17px;
+}
+.during_time li {
+  width: 80px;
+  padding-bottom: 0px;
+}
+.during_time a {
+  display: block;
+  width: 70px;
+  height: 25px;
+  line-height: 25px;
+  border: 1px solid #cccccc;
+  color: #999999;
+  padding-left: 5px;
+  background: #ffffff;
+  padding: 0px;
+  font-size: 11.89px;
+  text-align: center;
+}
+.clause {
+  padding-bottom: 0px;
+}
+.clause input,
+.clause span {
+  float: left;
+  display: inline;
+}
+.clause input {
+  margin: 5px 5px auto 110px;
+}
+.clause span {
+  margin-right: 5px;
+}
+.clause a {
+  color: #0055ff;
+  text-decoration: underline;
+}
+.self_info_submit {
+  float: left;
+  display: inline;
+  margin-left: 220px;
+  margin-bottom: 24px;
+}
+/*游戏主页面*/
+.game_center {
+  margin-top: 30px;
+  margin-bottom: 51px;
+}
+aside {
+  width: 182px;
+  float: left;
+  display: inline;
+}
+aside div {
+  width: 100%;
+}
+.tips {
+  background: #fcf465;
+  font-size: 12px;
+  color: #ff4c4d;
+}
+.tips h2 {
+  color: #68e5cf;
+  font-size: 22px;
+  height: 53px;
+  line-height: 53px;
+  padding: 5px 4px 0px 10px;
+}
+.tips span {
+  background: url("../images/game_tips.png");
+  width: 52px;
+  text-indent: -999px;
+  float: right;
+  display: inline;
+}
+.tips ul {
+  overflow: hidden;
+  width: 168px;
+  padding: 0px 10px;
+}
+.tips ul li {
+  width: 100%;
+  white-space: normal;
+  overflow: hidden;
+  padding: 6px 0px;
+}
+.tips ul label {
+  width: 14px;
+  float: left;
+  display: inline;
+}
+.tips ul p {
+  display: block;
+  float: left;
+  display: inline;
+  width: 146px;
+  line-height: 20px;
+}
+.tips ul p a {
+  color: #0055ff;
+  text-decoration: underline;
+}
+.personal {
+  border: 1px solid #ebebeb;
+  text-align: center;
+  margin-top: 8px;
+}
+.personal img {
+  width: 135px;
+  height: 135px;
+  margin-top: 16px;
+}
+.personal h2 {
+  height: 30px;
+  line-height: 24px;
+}
+.personal .level {
+  background: url("../images/game_start.png") no-repeat top left;
+  padding-left: 24px;
+  color: #ff7e00;
+}
+.personal .user_name {
+  margin-left: 13px;
+  color: #0055ff;
+}
+.personal h3 {
+  color: #000000;
+  font-size: 12px;
+}
+.personal h4 {
+  color: #999999;
+}
+.personal .login_submit {
+  width: 160px;
+  margin-top: 13px;
+  margin-bottom: 10px;
+}
+.game {
+  float: right;
+  display: inline;
+  width: 761px;
+  height: 553px;
+  background: #000;
+}
+.loading {
+  float: left;
+  display: inline;
+  width: 100%;
+  height: 200px;
+  background: #919191;
+  margin-top: 173px;
+  text-align: center;
+  color: #000;
+}
+.loading h2 {
+  font-size: 32px;
+  margin-top: 35px;
+  height: 77px;
+  line-height: 77px;
+}
+.loading p {
+  font-size: 24px;
+}
+.choose {
+  float: right;
+  display: inline;
+  width: 100%;
+  margin-top: 34px;
+}
+.choose h2 {
+  color: #4c4c4c;
+  font-size: 18.66px;
+}
+.rank_list {
+  width: 182px;
+  float: left;
+  display: inline;
+}
+.rank_list h2 {
+  background: url("../images/excalmatory_mark.png") no-repeat center right;
+  margin-left: 10px;
+  font-size: 18.66px;
+  color: #4c4c4c;
+  line-height: 30px;
+  height: 30px;
+}
+.rank_list li {
+  font-size: 10.67px;
+  height: 20px;
+  line-height: 20px;
+}
+.rank_list li span,
+.rank_list li img,
+.rank_list li p {
+  float: left;
+  display: inline;
+}
+.rank_list li .num {
+  width: 35px;
+  color: #999999;
+  text-align: center;
+}
+.rank_list li .song {
+  color: #005d89;
+  width: 112px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.rank_list li .rank {
+  float: right;
+  display: inline;
+  margin-right: 10px;
+  font-size: 10.67px;
+  color: #808080;
+}
+.rank_list .rank_first {
+  background: #f2f2f2;
+  height: 48px;
+  line-height: 48px;
+}
+.rank_list .rank_first .num {
+  font-size: 16px;
+  color: #ff7f00;
+}
+.rank_list .rank_first .song {
+  width: 100%;
+  height: 15px;
+  line-height: 15px;
+  font-size: 13px;
+  color: #ff7f00;
+}
+.rank_list .rank_first .rank {
+  float: left;
+  display: inline;
+  height: 14px;
+  line-height: 14px;
+}
+.rank_list .rank_first img {
+  width: 24px;
+  height: 24px;
+  margin-top: 12px;
+}
+.rank_list .rank_first p {
+  margin-left: 6px;
+  margin-top: 10px;
+}
+.choose_game {
+  width: 514px;
+  margin-left: 19px;
+  float: left;
+  display: inline;
+}
+.choose_game h2 {
+  line-height: 30px;
+  background: url("../images/excalmatory_mark.png") no-repeat center right;
+}
+.choose_game ul {
+  width: 100%;
+  overflow: hidden;
+}
+.choose_game li {
+  float: left;
+  display: inline;
+  width: 179px;
+  height: 140px;
+}
+.choose_game .right_li {
+  width: 155px;
+}
+.choose_game img {
+  width: 155px;
+  height: 100%;
+}
+.choose_game div {
+  position: relative;
+  width: 155px;
+}
+.choose_game a {
+  height: 40px;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.6) url("../images/play_btn.png") no-repeat top right;
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  display: none;
+}
+.choose_game a h3 {
+  font-size: 13.14px;
+  color: #00c0ff;
+  margin-left: 5px;
+}
+.choose_game a p {
+  font-size: 9.39px;
+  color: #fff;
+  margin-left: 5px;
+}
+.choose_game div:hover a {
+  display: block;
+}
+.choose_game .self_info_submit {
+  width: 160px;
+  margin-left: 177px;
+  margin-top: 18px;
+  color: #f3f3f3;
+}
+.choose_song {
+  float: right;
+  display: inline;
+  width: 227px;
+}
+.choose_song table {
+  font-size: 11.97px;
+}
+.choose_song table tr {
+  height: 30px;
+  line-height: 30px;
+}
+.choose_song table input {
+  width: 12px;
+  height: 12px;
+  float: left;
+  display: inline;
+  margin-left: 3px;
+}
+.choose_song table tr:nth-child(2n) {
+  background: #ebf6ff;
+}
+.choose_song .play {
+  display: block;
+  width: 80%;
+  height: 100%;
+  background: url("../images/play.png") no-repeat center center;
+  text-indent: -9999px;
+}
+.choose_song .listen {
+  width: 80%;
+  height: 100%;
+  background: url("../images/listen.png") no-repeat center center;
+  text-indent: -9999px;
+  display: block;
+}
+.choose_song .self_info_submit {
+  width: 160px;
+  margin-left: 35px;
+  margin-top: 10px;
+  color: #f3f3f3;
+}
+.choose_song .first_td {
+  width: 19px;
+}
+.choose_song .sec_td {
+  width: 126px;
+}
+.choose_song .third_td {
+  width: 32px;
+}
+.choose_song .forth_td {
+  width: 48px;
+}
+.microgroove_hide {
+  display: none;
+  background: #e7f6ff url("../images/microgroove.png") no-repeat;
+  width: 144px;
+  height: 305px;
+  position: absolute;
+  top: 108px;
+  right: 0px;
+}
+.microgroove_show {
+  width: 269px;
+  background: url("../images/microgroove_show.png") no-repeat top left;
+  padding-top: 260px;
+  position: absolute;
+  top: 108px;
+  right: 0px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.practice_wrapper {
+  width: 100%;
+  background: #e7f6ff;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.practice_song {
+  float: right;
+  display: inline;
+  width: 260px;
+  margin-bottom: 6px;
+}
+.practice_song h2 {
+  float: left;
+  display: inline;
+  color: #f07973;
+  font-size: 14px;
+}
+.practice_song table {
+  width: 100%;
+  font-size: 12px;
+}
+.practice_song th {
+  text-align: center;
+}
+.practice_song tr {
+  height: 30px;
+  width: 100%;
+}
+.practice_song tr:nth-child(2n) {
+  background: #fff;
+}
+.practice_song .first_td {
+  width: 20px;
+}
+.practice_song .sec_td {
+  width: 140px;
+}
+.practice_song .third_td {
+  width: 48px;
+}
+.practice_song .forth_td {
+  width: 50px;
+}
+.practice_song span {
+  color: red;
+}
+.practice_song td a {
+  display: block;
+  background: url("../images/buy_car.png") no-repeat center center;
+  text-indent: -9999px;
+}
+.practice_head {
+  width: 260px;
+  height: 23px;
+  border-bottom: 1px dashed #f07973;
+}
+.search_form {
+  float: right;
+  display: inline;
+  width: 136px;
+  height: 16px;
+  margin-right: 5px;
+  border: 1px solid #b3b3b3;
+}
+.search_form input[type=text] {
+  width: 115px;
+  height: 15px;
+  background: #fff;
+  border: 0px;
+  float: left;
+  display: inline;
+}
+.search_form input[type=submit] {
+  float: left;
+  display: inline;
+  width: 21px;
+  height: 16px;
+  background: url("../images/search_btn.png") no-repeat;
+  text-indent: -9999px;
+  border: 0px;
+}
+/*忘记密码页面*/
+.forget_password {
+  width: 478px;
+  height: 229px;
+  border: 1px solid #cccccc;
+  margin: 40px auto 150px;
+  text-align: center;
+}
+.forget_password h2 {
+  color: #0099ff;
+  font-size: 18px;
+  height: 80px;
+  line-height: 80px;
+}
+.forget_password p {
+  height: 50px;
+  line-height: 50px;
+}
+.forget_password input[type="text"] {
+  width: 269px;
+  height: 29px;
+  line-height: 29px;
+  border: 1px solid #cccccc;
+  color: #cccccc;
+  padding-left: 5px;
+  background: #f3f5f5;
+}
+.forget_password input[type="submit"] {
+  border: 0px;
+  background: url("../images/self_info_btnbg.png") repeat-x;
+  width: 102px;
+  height: 31px;
+  line-height: 31px;
+  color: #f3f3f3;
+  font-size: 14px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  margin-left: 15px;
+}
+/*选择游戏页面*/
+.hot_new {
+  width: 100%;
+  overflow: hidden;
+}
+.hot_new h2 {
+  height: 66px;
+  line-height: 66px;
+}
+.hot_new h2 .hn_span {
+  float: left;
+  display: inline;
+  width: 4px;
+  height: 18px;
+  background: #0099ff;
+  display: block;
+  margin-top: 25px;
+  margin-right: 10px;
+}
+.hot_new .hot {
+  width: 330px;
+  float: left;
+  display: inline;
+}
+.hot_new .new {
+  float: right;
+  display: inline;
+  width: 550px;
+}
+.hot .h_game {
+  width: 100%;
+}
+.hot .h_game a {
+  width: 330px;
+  height: 330px;
+  position: relative;
+  display: block;
+}
+.hot .h_game a:hover .hover_game {
+  display: block;
+}
+.hot p {
+  width: 330px;
+  font-size: 13.99px;
+  color: #0073bf;
+  white-space: normal;
+}
+.hot .hover_game {
+  display: none;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  background: #000;
+  opacity: 0.6;
+  filter: alpha(opacity=60);
+}
+.hot .hover_game img {
+  margin: 74px auto auto 114px;
+}
+.hot .hover_game p {
+  color: #fff;
+  font-size: 17.55px;
+  text-align: center;
+}
+.new .n_game {
+  float: left;
+  display: inline;
+  width: 245px;
+  height: 183px;
+}
+.new .n_game a {
+  position: relative;
+  display: block;
+}
+.new .n_game a:hover .hover_game {
+  display: block;
+}
+.new .n_game:nth-child(2n) {
+  float: right;
+  display: inline;
+}
+.new .wait_blue,
+.new .wait_red {
+  width: 245px;
+  height: 148px;
+  color: #fff;
+  font-size: 23.76px;
+  text-align: center;
+  line-height: 148px;
+}
+.new .wait_blue {
+  background: #97d6ea;
+}
+.new .wait_red {
+  background: #ff9a87;
+}
+.new .hover_game {
+  display: none;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  background: #000;
+  opacity: 0.6;
+  filter: alpha(opacity=60);
+}
+.new .hover_game img {
+  margin: 39px auto auto 100px;
+}
+.new .hover_game p {
+  color: #fff;
+  font-size: 13.39px;
+  text-align: center;
+}
+.new_main {
+  width: 100%;
+  overflow: hidden;
+}
+.new_main .n_game {
+  float: left;
+  display: inline;
+  height: 183px;
+  margin-right: 30px;
+}
+.new_main .n_game img {
+  height: 148px;
+}
+.new_main .n_game a {
+  position: relative;
+  display: block;
+}
+.new_main .n_game a:hover .hover_game {
+  display: block;
+}
+.new_main .hover_game {
+  display: none;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  background: #000;
+  opacity: 0.6;
+  filter: alpha(opacity=60);
+}
+.new_main .hover_game img {
+  width: 52px;
+  height: 52px;
+  position: absolute;
+  left: 50%;
+  margin-top: 39px;
+  margin-left: -26px;
+}
+.new_main .hover_game p {
+  color: #fff;
+  font-size: 13.39px;
+  text-align: center;
+  width: 100%;
+  position: absolute;
+  top: 96px;
+}
+.load {
+  width: 100%;
+  height: 35px;
+  line-height: 35px;
+  background: #f0f0f0;
+  color: #808080;
+  font-size: 16px;
+  display: block;
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 20px;
 }

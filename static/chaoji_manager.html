@@ -26,10 +26,10 @@
 	<section class="main">
 		<nav>
 			<ul>
-				<li><a href="#" data-target="news">最新资讯</a></li>
-				<li><a href="#">学生管理</a></li>
-				<li><a href="#" class="current">琴行管理员管理</a></li>
-				<li><a href="#">歌曲和游戏管理</a></li>
+				<li><a href="#">最新资讯</a></li>
+				<li><a href="chaoji_student.html">学生管理</a></li>
+				<li><a href="chaoji_manager.html" class="current">琴行管理员管理</a></li>
+				<li><a href="chaoji_games.html">歌曲和游戏管理</a></li>
 			</ul>
 		</nav>
 		<section class="manager">
@@ -112,16 +112,30 @@
 					<td><span class="ceil_phone">454857599</span></td><td class="choose"><input type="checkbox"></td>
 				</tr>
 				<tr>
-					<td class="table_bottom" colspan="14">
+					<td class="table_bottom" colspan="10">
 						<ul>
-							<li><input type="checkbox"><span>全选</span></li>
-							<li><input type="checkbox"><span>反选</span></li>
+							<li><input type="checkbox" class="allSelect"><span>全选</span></li>
+							<li><input type="checkbox" class="oppositeSelect"><span>反选</span></li>
 							<li><a href="#" class="delete">删除已选</a></li>
 							<li><a href="#" class="edit">编辑已选</a></li>
 						</ul>
 					</td>
 				</tr>
 			</table>
+			<form class="table_edit">
+				<div class="te_div">
+					<table>
+						<tr>
+							<th><span class="email">邮箱</span></th><th><span class="passwork">密码</span></th>
+							<th><span class="piano_com">琴行名称</span></th><th><span class="invite_code">邀请码</span></th>
+							<th><span class="op_time">合作时间</span></th><th><span class="type">套餐类型</span></th>
+							<th><span class="open_time">开通时间</span></th><th><span class="end_time">到期时间</span></th>
+							<th><span class="ceil_phone">联系电话</span></th>
+						</tr>
+					</table>
+				</div>
+				<input type="submit" value="取消" class="houtai_cancel"><input type="submit" value="保存" class="houtai_save">
+			</form>
 			<div class="jump_to">
 				<form>
 					<span>转到</span><input type="text"><span>页</span><input type="submit" value="提交">
@@ -151,5 +165,16 @@
 			</ul>
 		</div>
 	</footer>
+	<script type="text/javascript">
+	$(".edit").click(function(){
+		editForm(".table",".table_edit");
+		editItemManage(".table", ".table_edit table");
+	});
+	$(".houtai_cancel").click(function(){
+		editForm(".table_edit",".table");
+	});
+	xuan(".allSelect");
+	fanxuan(".oppositeSelect");
+	</script>
 </body>
 </html>

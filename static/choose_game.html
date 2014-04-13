@@ -65,11 +65,55 @@
 					</div>
 				</div>
 			</section>
-		</section>
-		<a href="#" class="load">加载更多</a>
-	</section>
-	
 
+		</section>
+		<section  class="new_main">
+			<ul>
+				<li class="n_game">
+					<a href="#">
+						<img src="../media/images/new_game1.gif">
+						<div class="hover_game"><img src="../media/images/new_play.png"><p>开始游戏</p></div>
+					</a>
+					<p>游戏的名字</p>
+				</li>
+				<li class="n_game">
+					<a href="#">
+						<img src="../media/images/new_game1.gif">
+						<div class="hover_game"><img src="../media/images/new_play.png"><p>开始游戏</p></div>
+					</a>
+					<p>游戏的名字</p>
+				</li>
+			</ul>
+			<ul>
+				<li class="n_game">
+					<a href="#">
+						<img src="../media/images/hot_game.gif">
+						<div class="hover_game"><img src="../media/images/new_play.png"><p>开始游戏</p></div>
+					</a>
+					<p>游戏的名字</p>
+				</li>
+			</ul>
+			<ul>
+				<li class="n_game">
+					<a href="#">
+						<img src="../media/images/new_game1.gif">
+						<div class="hover_game"><img src="../media/images/new_play.png"><p>开始游戏</p></div>
+					</a>
+					<p>游戏的名字</p>
+				</li>
+				<li class="n_game">
+					<a href="#">
+						<img src="../media/images/new_game1.gif">
+						<div class="hover_game"><img src="../media/images/new_play.png"><p>开始游戏</p></div>
+					</a>
+					<p>游戏的名字</p>
+				</li>
+			</ul>
+			
+		</section>
+		<a href="#" class="load" data-yeshu="1">加载更多</a>
+	</section>
+		
 	<footer>
 		<div class="footer">
 			<img src="../media/images/footer_logo.png">
@@ -82,5 +126,43 @@
 			</ul>
 		</div>
 	</footer>
+	<script type="text/javascript">
+	loadGame(1);
+	$('.load').click(function(){
+		var yeshu = $(this).attr("data-yeshu");
+		loadGame(yeshu);
+		return false;
+	})
+	function loadGame(yeshu){
+		$.ajax({
+			type: "POST",
+			url: "addli.php",
+			data: {yeshu:yeshu},
+			dataType: 'json',
+			success: function(data){
+
+				var data = data['data'];
+				var num = data.length;
+				for(var i = 0; i < num; i++){
+					var oul = getMinUl();
+					var ohtml = '<li class="n_game"><a href="#"><img src="'+data[i]['img']+'"><div class="hover_game"><img src="../media/images/new_play.png"><p>'+data[i]['title']+'</p></div></a></li>';
+					oul.append(ohtml);
+				}
+			},
+			error: function(){
+			},
+		});
+	}
+	function getMinUl(){
+		var arrUl = $(".new_main ul");
+		var minUl = arrUl.eq(0);
+		arrUl.each(function(index, elem){
+			if($(elem).height() < minUl.height()){
+				minUl = $(elem);
+			}
+		});
+		return minUl;
+	}
+	</script>
 </body>
 </html>

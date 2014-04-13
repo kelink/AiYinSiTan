@@ -3,8 +3,8 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>支付页面</title>
-	<link rel="stylesheet/less" href="../media/less/screen.less" />
+	<title>后台-会员套餐</title>
+	<link rel="stylesheet/less" href="../media/less/houtai.less" />
 	<script src="../media/js/less-1.5.0.min.js"></script>
 	<script type="text/javascript" src="../media/js/jquery-1.10.1.min.js"></script>
 	<script type="text/javascript" src="../media/js/script.js"></script>
@@ -16,45 +16,45 @@
 				<img src="../media/images/header_logo.png">
 				<h1>爱音思弹</h1>
 			</a>
-			<!-- 判断处于哪个页面选择显示是否显示个人中心或者游戏中心 -->
-			<a href="#" class="personal_or_game">
-				个人中心
-			</a> 
-			<!--<a href="#" class="personal_or_game">
-				游戏中心
-			</a>-->
+			<span><a href="#" class="logout">退出</a></span>
+			<span><a href="#">修改密码</a></span>
+			<form>
+				<div class="search_form"><input type="text" placeholder="直接搜索查询"><input type="submit" value="搜索"></div>
+			</form>
 		</div>
 	</header>
 	<section class="main">
-		<section class="pay_form">
-			<form>
-				<h2>
-					支付页面
-				</h2>
+		<nav>
+			<ul>
+				<li><a href="houtai_student.html"><span class="nav_student">学生管理</span></a></li>
+				<li><a href="houtai_quanxian.html"><span class="nav_message">站内信息</span></a></li>
+				<li><a href="houtai_combo.html" class="current"><span class="nav_taocan">会员套餐</span></a></li>
+			</ul>
+		</nav>
+		<section class="combo">
+			<h2>升级流程</h2>
+			<div class="step">
+				<div class="cb_step"><span class="step_circle">1</span>选择套餐类型</div>
+				<div class="cb_step"><span class="step_circle">2</span>选择时长</div>
+				<div class="cb_step"><span class="step_circle">3</span>支付方式</div>
+				<div class="cb_step"><span class="step_circle">4</span>跳转支付宝收银台</div>
+			</div>
+			<form class="combo_form">
 				<ol>
 					<li>
 						<label>开通对象：</label>
-						<input type="text" placeholder="自己或他人的邮箱" class="pay_email">
+						<input type="text" placeholder="XXXXX琴行" class="kt_object">
 					</li>
 					<li>
-						<label>开通套餐：</label>
-						<ul class="combo">
-							<li>
-								<a href="#"><span>月亮套餐</span><span class="tick">选中</span></a>
-								<div class="moom">游戏时间无限<span></span></div>
-							</li>
-							<li>
-								<a href="#" class="current"><span>太阳套餐</span><span class="tick">选中</span></a>
-								<div class="sun">游戏时间无限<br>任意选择关卡<span></span></div>
-							</li>
-						</ul>
+						<label>开通对象：</label>
+						<input type="text" class="kt_input">
+						<span class="kt_ren">人</span>
+						<label>开通对象：</label>
+						<input type="text" class="kt_input">
 					</li>
 					<li>
 						<label>开通时长：</label>
 						<ul class="during_time">
-							<li>
-								<a href="#"><span>一周体验</span><span class="tick">选中</span></a>
-							</li>
 							<li>
 								<a href="#" class="current"><span>一个月</span><span class="tick">选中</span></a>
 							</li>
@@ -83,6 +83,7 @@
 				</ol>
 				<button class="self_info_submit">去支付宝付款</button>
 			</form>
+			<p class="cb_question">如有疑问请致电：18826401056</p>
 		</section>
 	</section>
 	<footer>
@@ -98,7 +99,6 @@
 		</div>
 	</footer>
 	<script type="text/javascript">
-	duringTime("combo");
 	duringTime("during_time");
 	</script>
 </body>
